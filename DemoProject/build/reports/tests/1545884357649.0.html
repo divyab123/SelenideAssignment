@@ -1,0 +1,3575 @@
+<!DOCTYPE html><html ng-app="app" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="ng-scope ext-strict"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+<script src="/static/111213/js/perf/stub.js" type="text/javascript"></script><script src="/jslibrary/1539646802000/sfdc/VFRemote.js" type="text/javascript"></script><script type="text/javascript">window.Sfdc = window.Sfdc || {};
+Sfdc.xdomain = Sfdc.xdomain || {};
+Sfdc.xdomain.sfdcXDomainProxy = 'https://na73.salesforce.com/support/console/xdomain/30.0/crossDomainProxy.html';
+</script><script src="/support/console/xdomain/30.0/xdomain.js" type="text/javascript"></script><script src="/jslibrary/1538677104000/ui-sfdc-javascript-impl/SfdcCore.js" type="text/javascript"></script><script src="/jslibrary/1539646802000/sfdc/AuraAlohaFrameNavigator.js" type="text/javascript"></script><script src="/sforce/one/36.0/api.js" type="text/javascript"></script><script src="/resource/1514184176000/icix_v1__jquery_min" type="text/javascript"></script><script src="/resource/1514184176000/icix_v1__moment_JS" type="text/javascript"></script><script src="/resource/1544435284000/icix_v1__common/bundle.js" type="text/javascript"></script><style type="text/css">.popup-panel {
+  position: fixed;
+  z-index: 9001;
+  border: 1px solid #888;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: white;
+}
+.popup-panel.slds-modal--small {
+  width: 25%;
+  max-width: 480px;
+}
+.popup-panel.slds-modal--medium {
+  width: 50%;
+  max-width: 640px;
+  min-width: 320px;
+}
+.popup-panel.slds-modal--large {
+  width: 90%;
+  max-width: none;
+  min-width: 640px;
+}
+.popup-panel.tall {
+  height: 314px;
+}
+.popup-panel .slds-modal__close.inside {
+  top: -8px;
+}
+.popup-panel.absolute {
+  position: absolute;
+}
+.popup-panel.top {
+  top: 0;
+}
+.popup-panel.top-below-header {
+  top: 100px;
+}
+.popup-panel.left {
+  left: 0;
+}
+.popup-panel.left-30pc {
+  left: 30%;
+}
+.popup-panel.right {
+  right: 0;
+}
+.popup-panel.bottom {
+  bottom: 0;
+}
+.popup-panel.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #888;
+  border-radius: 0;
+}
+.popup-panel.footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border: none;
+  border-top: 1px solid #888;
+  border-radius: 0;
+}
+.popup-panel.footer .slds-modal__footer {
+  text-align: left;
+}
+.popup-panel.sidebar {
+  top: 0;
+  bottom: 0;
+}
+.popup-panel.shadow {
+  box-shadow: 2px 2px 3px #888;
+}
+</style><style type="text/css">edit-field .slds-input.number {
+  text-align: right;
+  padding-right: 0;
+}
+edit-field .pre-text {
+  white-space: pre-line;
+}
+</style><style type="text/css">.lab-selection .lab-detail-label {
+  vertical-align: top;
+  display: inline-block;
+}
+.lab-selection .selected-lab-title {
+  font-weight: bold;
+}
+.lab-selection .selected-lab-address {
+  font-size: 11px;
+}
+</style><style type="text/css">multi-select {
+  display: block;
+  margin: 10px;
+}
+multi-select ul.slds-picklist__options--multi.shown {
+  width: 300px;
+}
+</style><style type="text/css">.partner-connect .uu-tag,
+.product-connect .uu-tag {
+  display: inline-block;
+  min-width: 25%;
+}
+.partner-connect hr,
+.product-connect hr {
+  margin: 16px 0;
+}
+.partner-connect legend.inline,
+.product-connect legend.inline {
+  float: left;
+}
+.slds-tabs--scoped .slds-tabs--scoped__content.slds-show {
+  min-height: 99px;
+  position: relative;
+}
+.slds-tabs--scoped .slds-tabs--scoped__content.slds-show .center-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  height: 24px;
+  width: 24px;
+}
+</style><style type="text/css">.body-background {
+  background-color: white !important;
+}
+product-connect .uu-tag {
+  display: inline-block;
+  min-width: 25%;
+}
+product-connect p.slds-form-element__label {
+  font-size: 14px !important;
+}
+product-connect .mutiselect-producttest multi-select .slds-picklist--draggable {
+  float: left;
+}
+product-connect .mutiselect-producttest multi-select .slds-picklist--draggable .slds-grid--vertical::last-child {
+  display: none;
+}
+product-connect .mutiselect-producttest multi-select .slds-picklist__options.slds-picklist__options--multi {
+  padding: 0;
+}
+product-connect .mutiselect-producttest multi-select .slds-picklist__options.slds-picklist__options--multi .slds-picklist__item.slds-is-selected span {
+  background-color: #037BD8;
+  color: #fff;
+}
+product-connect .mutiselect-producttest .prduct-property {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  float: left;
+  height: 240px;
+  margin-left: -42px;
+  margin-top: 63px;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: auto;
+  padding: 4px 5px;
+  width: 300px;
+}
+product-connect .mutiselect-producttest .prduct-property label {
+  position: relative;
+  margin-bottom: 5px;
+}
+product-connect .mutiselect-producttest .prduct-property label .slds-checkbox--faux {
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+product-connect .mutiselect-producttest .prduct-property label .slds-form-element__label {
+  display: inline-block;
+  line-height: 16px;
+  margin-top: 2px;
+  padding-left: 23px;
+}
+product-connect .fadediv {
+  -webkit-animation: fadeinout 0.7s linear 1 forwards;
+  animation: fadeinout 0.7s linear 1 forwards;
+}
+@-webkit-keyframes fadeinout {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeinout {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.slds-page-header .icon-div {
+  background-color: #FFA444;
+  border-radius: 3px;
+  margin-right: 10px;
+  padding: 3px;
+}
+#btnCreateProduct {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+}
+.slds-tabs--scoped__content .slds-show {
+  min-height: 99px;
+  position: relative;
+}
+</style><style type="text/css">popover {
+  float: left;
+  width: 100%;
+}
+popover .relative {
+  width: 100%;
+  display: block;
+}
+popover .selectable {
+  user-select: text;
+}
+popover .slds-popover {
+  font-size: 0.85em;
+}
+popover .slds-popover .wrap-text {
+  white-space: normal;
+}
+popover .slds-popover .text {
+  white-space: pre-line;
+}
+popover .link {
+  color: #005fb2;
+}
+popover .popover_title {
+  margin-top: 5px;
+}
+</style><style type="text/css">product-test-results textarea.comment::-webkit-input-placeholder {
+  color: #C5C9CD;
+}
+product-test-results label.slds-form-element__label {
+  font-weight: bold;
+}
+product-test-results .test-status {
+  text-align: left;
+  font-weight: bold;
+  color: white;
+}
+product-test-results .inlineBlock {
+  display: inline-block;
+}
+product-test-results .pass,
+product-test-results .non-detect,
+product-test-results .non-detectpass {
+  background-color: #42C376;
+}
+product-test-results .warning {
+  background-color: #e4ba00;
+}
+product-test-results .fail,
+product-test-results .kidfail,
+product-test-results .kidchildrensfail {
+  background-color: #BA302D;
+}
+product-test-results .additionaltestingneeded {
+  color: black;
+  font-weight: normal;
+}
+product-test-results .groupsum,
+product-test-results .informationonly {
+  color: black;
+  background-color: #cdd0d3;
+}
+product-test-results .disabledInput {
+  background-color: #dce1eb;
+}
+product-test-results textarea.comment,
+product-test-results div.comment {
+  border: none;
+  color: black;
+  font-weight: normal;
+  height: 100%;
+  width: 100%;
+  resize: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+  margin-left: 2.5px;
+  padding: 8px;
+}
+product-test-results .corrective-action {
+  font-weight: bold;
+}
+product-test-results input[type="radio"] {
+  margin-right: 5px;
+}
+product-test-results .posr,
+product-test-results .relative {
+  position: relative;
+}
+product-test-results table.product-test-results th {
+  font-size: 0.75rem;
+  color: #586A8B;
+  padding: 2px 5px;
+  border: 1px solid #D2D8E2;
+  border-top: none;
+}
+product-test-results table.product-test-results th:first-child,
+product-test-results table.product-test-results td:first-child {
+  border-left: none;
+}
+product-test-results table.product-test-results th:last-child,
+product-test-results table.product-test-results td:last-child {
+  border-right: none;
+}
+product-test-results table.product-test-results td {
+  border: 1px solid #D2D8E2;
+  padding: 5px;
+}
+product-test-results table.product-test-results td span.fontcolorPDF {
+  color: white !important;
+}
+product-test-results table.product-test-results tr.group-sum {
+  background-color: #E0E5EE;
+  font-weight: bold;
+}
+product-test-results table.product-test-results tr.group-sum td {
+  border-bottom: 2px solid #444;
+  border-top: 2px solid #444;
+}
+product-test-results table.product-test-results tr.group-divider td {
+  border-top: 2px solid #a7a7a7;
+}
+product-test-results table.product-test-results td.fixed,
+product-test-results table.product-test-results th.fixed {
+  width: 180px;
+}
+product-test-results table.product-test-results td.checkbox,
+product-test-results table.product-test-results th.checkbox {
+  text-align: center;
+  width: 50px;
+}
+product-test-results table.product-test-results td.action-icons,
+product-test-results table.product-test-results th.action-icons {
+  text-align: center;
+  min-width: 70px;
+}
+product-test-results table.product-test-results .answer {
+  text-align: right;
+  width: 110px;
+}
+product-test-results table.product-test-results .disabled {
+  color: #888c94;
+}
+product-test-results table.product-test-results .disabledLimits {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  background-color: #d1d3d7;
+}
+product-test-results table.product-test-results .test-status {
+  text-align: center;
+}
+product-test-results table.product-test-results .test-result-width {
+  width: 260px;
+}
+product-test-results table.product-test-results .test-result-comment {
+  font-weight: normal;
+  word-wrap: break-word;
+}
+product-test-results .bulk-actions--container select::-ms-expand {
+  display: none;
+}
+product-test-results .bulk-actions--container select.slds-select {
+  height: 36px;
+  color: #d1d3d7;
+}
+product-test-results .bulk-actions--container select.selected {
+  color: #005fb2;
+}
+product-test-results .bulk-actions--container select option {
+  color: #005fb2;
+}
+product-test-results .bulk-actions--container select option:first-child {
+  display: none;
+}
+product-test-results .bulk-actions--container .slds-button {
+  margin-left: 5px;
+}
+product-test-results .answer-non-detect--container {
+  color: #005fb2;
+}
+product-test-results .answer-non-detect--container:hover &gt; .edit-icon-container {
+  display: block;
+}
+product-test-results .answer-non-detect--container .answer-value {
+  position: relative;
+}
+product-test-results .answer-non-detect--container .answer-value abbr {
+  position: absolute;
+  top: 0;
+  right: -12px;
+}
+product-test-results .answer-non-detect--container .edit-icon-container {
+  display: none;
+  position: absolute;
+  right: 0;
+}
+.product-test-selection .slds-pill {
+  font-size: 0.9em;
+}
+.product-test-selection .slds-pill .slds-pill__label.whole {
+  max-width: none;
+}
+.product-test-selection .slds-pill .slds-pill__icon {
+  padding: 4px;
+  background-color: #FFA444;
+}
+.product-test-selection .slds-pill a {
+  text-decoration: none;
+}
+.product-test-selection .slds-pill .item-type {
+  color: grey;
+}
+.product-test-selection .slds-pill__container.noline {
+  border: none;
+}
+</style><style type="text/css">.summary-of-failures .summary-style .summary-of-failures-header,
+.summary-of-failures .summary-style .no-summary {
+  margin-bottom: 10px;
+}
+.summary-of-failures table {
+  margin-bottom: 10px;
+}
+.summary-of-failures table td {
+  border: 1px solid #D2D8E2;
+  padding: 5px;
+}
+.summary-of-failures table td.fixed {
+  width: 30%;
+}
+.summary-of-failures table td.fixed-value {
+  width: 250px;
+}
+.summary-of-failures table th {
+  font-size: 0.75rem;
+  color: #586A8B;
+  border: 1px solid #D2D8E2;
+  border-top: none;
+  padding: 2px 5px;
+}
+.summary-of-failures table th:first-child,
+.summary-of-failures table td:first-child {
+  border-left: none;
+}
+.summary-of-failures table th:last-child,
+.summary-of-failures table td:last-child {
+  border-right: none;
+}
+.summary-of-failures table th.text-center {
+  text-align: center;
+}
+.summary-of-failures .no-borders {
+  border: none;
+}
+.summary-of-failures .on-top {
+  vertical-align: top;
+}
+.summary-of-failures .fail,
+.summary-of-failures .kid,
+.summary-of-failures .warning {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: #BA302D;
+}
+.summary-of-failures .warning {
+  background-color: #e4ba00;
+}
+</style><style type="text/css">.executive-summary table th {
+  font-size: 0.75rem;
+  color: #586A8B;
+  padding: 2px 5px;
+}
+.executive-summary table th.executive-summary-header {
+  padding-left: 0px;
+}
+.executive-summary table td {
+  padding: 6px;
+}
+.executive-summary table tr.separator {
+  height: 5px;
+}
+.executive-summary table .print-readonly-style {
+  min-height: 66px;
+}
+.executive-summary table td.limitType {
+  width: 280px;
+  padding: 10px;
+  margin-top: 5px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  font-size: 20px;
+}
+.executive-summary table td.limitComment {
+  height: 100%;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.executive-summary table td.paddingLimitCommentTrue {
+  padding: 1px 5px 1px 0px;
+}
+.executive-summary table td.paddingLimitCommentFalse {
+  padding: 5px 5px 0px 0px;
+}
+.executive-summary table .disabled {
+  background-color: #dce1eb;
+}
+.executive-summary table .comment-left {
+  margin-left: 6px;
+}
+.executive-summary .pass,
+.executive-summary .non-detect,
+.executive-summary .non-detectpass {
+  background-color: #42C376;
+}
+.executive-summary .warning {
+  background-color: #e4ba00;
+}
+.executive-summary .fail,
+.executive-summary .kidfail,
+.executive-summary .kidchildrensfail {
+  background-color: #BA302D;
+}
+.executive-summary .groupsum,
+.executive-summary .informationonly {
+  color: black;
+  background-color: #cdd0d3;
+}
+.executive-summary .test-status {
+  text-align: left;
+  font-weight: bold;
+  color: white;
+}
+.executive-summary textarea.comment,
+.executive-summary div.comment {
+  color: black;
+  font-weight: normal;
+  height: 100%;
+  width: 100%;
+  resize: none;
+  border-radius: 2px;
+  box-sizing: border-box;
+  margin-left: -1px;
+}
+.executive-summary .disabledInput {
+  background-color: #dce1eb;
+}
+.ext-chrome .executive-summary td.hasTextArea {
+  padding-bottom: 3px;
+  padding-top: 9px;
+}
+@media print {
+  .executive-summary tr.print-style {
+    border: 2px solid black;
+    margin-bottom: 12px;
+  }
+}
+</style><style type="text/css">/*@light-grey: #C5C9CD;
+
+rule-builder
+{
+}*/
+.certExceptClass use {
+  fill: red !important;
+}
+</style><style type="text/css">.file-select-table__layout {
+  width: 70% !important;
+  max-width: 100em !important;
+  min-width: 50em !important;
+}
+.single-file-upload-menu__layout {
+  max-width: 30em !important;
+}
+.single-file-upload__menu .file-card-container {
+  width: 100%;
+  display: inline-table;
+}
+.single-file-upload__menu .file-card-container .file-card__block {
+  display: table-cell;
+  width: 14em;
+  text-align: center;
+  padding: 2.5em 1em 2.5em 1em;
+  background-color: #fff;
+  border: 2px dashed #d8dde6;
+  cursor: pointer;
+}
+.single-file-upload__menu .file-card-container .file-card__icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: .5em;
+}
+.single-file-upload__menu .file-card-container .file-card__separator {
+  text-align: center;
+  display: table-cell;
+  width: 3em;
+}
+.file-select-table table {
+  border-top: none;
+}
+.file-select-table table .slds-text-title--caps {
+  text-transform: uppercase;
+}
+.file-select-table table .file__name {
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  color: #0070d2;
+}
+.file-select-table table .slds-checkbox--faux {
+  cursor: pointer;
+}
+.file-select-table .file-select-table__description {
+  margin-left: 22px;
+}
+.file-select-table .file-select-table__header th {
+  border-top: none;
+}
+.file-select-table .file-select-table__header a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: #54698d;
+  cursor: default;
+}
+</style><style type="text/css">.q-file-upload--dropzone-target {
+  border: 2px #cccccc dashed;
+  border-radius: 0.25rem;
+  min-height: 10rem;
+  padding-top: 0;
+  color: #cccccc;
+}
+.q-file-upload--dropzone-title-icon {
+  text-align: center;
+}
+.q-file-upload--dropzone-input-label {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  background: transparent;
+  background-clip: padding-box;
+  border: none;
+  border-radius: 4px;
+  color: #0070d2;
+  font-size: inherit;
+  line-height: 34px;
+  text-decoration: none;
+  -webkit-appearance: none;
+  white-space: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: color 0.05s linear, background-color 0.05s linear;
+  transition: color 0.05s linear, background-color 0.05s linear;
+  cursor: pointer;
+}
+.q-file-upload--dropzone-input {
+  position: absolute;
+  z-index: -100;
+  height: 0.1px;
+  width: 0.1px;
+  opacity: 0.001;
+  -moz-opacity: 0.001;
+  cursor: pointer;
+}
+.q-file-upload--icix-working-file-remove {
+  color: red;
+  cursor: pointer;
+  font-weight: bold;
+}
+</style><style type="text/css">.single-file-upload .single-file-upload__header h2 {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+.multiple-file-upload .main-modal div.slds-modal__header {
+  position: relative;
+  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  border-bottom: 2px none #d8dde6;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  line-height: 1rem;
+  text-align: left;
+}
+.multiple-file-upload .slds-modal__content {
+  padding-top: 0;
+}
+</style><style type="text/css">.q-file-upload-template-util .full-width {
+  width: 100%;
+}
+.slds-upload-text__overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.single-file-upload .slds-file-selector .slds-file-selector__dropzone {
+  padding: 1px;
+  border: 1px dashed #d8dde6;
+  border-radius: .25rem;
+}
+.single-file-upload .slds-file-selector .slds-has-drag-over {
+  outline: 0;
+  border-color: #1589ee;
+  box-shadow: 0 0 3px #0070D2;
+  border-style: solid;
+}
+.single-file-upload .slds-file-selector .slds-file-selector__body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.single-file-upload .slds-file-selector .slds-file-selector__button {
+  max-height: 2rem;
+  line-height: 1.625rem;
+  overflow: hidden;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  cursor: pointer;
+  min-width: 125px;
+}
+.single-file-upload .slds-file-selector .slds-file-selector__button .slds-button__icon {
+  margin-bottom: 2px;
+}
+@media (max-width: 1300px) {
+  .single-file-upload .slds-file-selector .slds-file-selector__button {
+    width: 100%;
+  }
+}
+.single-file-upload .slds-file-selector .slds-file-selector__text {
+  display: none;
+}
+@media (min-width: 1300px) {
+  .single-file-upload .slds-file-selector .slds-file-selector__text {
+    display: block;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: 40%;
+    text-align: center;
+  }
+}
+.single-file-upload .uploaded-file-wrapper {
+  min-height: 36px;
+}
+.single-file-upload .uploaded-file-wrapper.editable {
+  border-bottom: 1px solid #d8dde6;
+  padding-top: 7px;
+}
+.uploaded-file__title {
+  max-width: 90%;
+  word-wrap: break-word;
+}
+</style><style type="text/css">.relationship-attributes .slds-picklist {
+  margin-top: 0 !important;
+}
+.relationship-attributes .slds-pill_container--bare {
+  border: 0;
+  border-radius: 0;
+}
+.relationship-attributes .slds-section.slds-is-open .slds-section__content {
+  padding-top: 8px;
+}
+.relationship-attributes .slds-section__title-action {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  text-transform: uppercase;
+  color: #16325C;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  padding: 0 .5rem;
+}
+.relationship-attributes .slds-modal__container {
+  height: 100% !important;
+  padding: 48px 0 !important;
+}
+.relationship-attributes .filters-container .slds-button-group {
+  display: inline-flex;
+  text-align: initial;
+}
+.relationship-attributes .filters-container .slds-lookup {
+  width: 240px;
+  display: inline-flex;
+}
+.relationship-attributes .filters-container .slds-lookup .slds-form-element {
+  width: 100%;
+}
+.relationship-attributes .filters-container .slds-lookup .slds-lookup__menu.auto {
+  width: 100%;
+}
+.relationship-attributes .filters-container .slds-lookup .slds-pill_container {
+  text-align: left;
+}
+.relationship-attributes .filters-container .slds-lookup .slds-input {
+  line-height: 33px;
+}
+.relationship-attributes .slds-lookup__item-action {
+  font-size: .8125rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .25rem .5rem;
+  color: #16325c;
+  text-align: left;
+  width: 100%;
+  line-height: 1.5;
+  border-radius: 0;
+}
+.relationship-attributes .slds-lookup__item-action:hover {
+  outline: 0;
+  cursor: pointer;
+  background-color: #f4f6f9;
+  color: #16325c;
+  text-decoration: none;
+}
+.relationship-attributes .slds-picklist--draggable .slds-picklist__options span.slds-truncate {
+  max-width: 100%;
+}
+.relationship-attributes .group-indent {
+  padding-left: 51px !important;
+}
+.relationship-attributes .slds-section__content {
+  transition: all .5s linear;
+}
+@media (min-width: 48em) {
+  .relationship-attributes .slds-modal__container {
+    margin: 0 auto;
+    width: 50% !important;
+    max-width: 640px !important;
+    min-width: 320px !important;
+  }
+  .relationship-attributes .slds-modal__container.multipicklistModal {
+    min-width: 715px !important;
+    max-width: 715px !important;
+  }
+}
+</style><style type="text/css">.slds-popover.slds-popover--tooltip.slds-desc-bubble {
+  background-color: #3d9cd6;
+  position: absolute;
+  border-radius: 4px;
+  z-index: 99;
+  top: 0px;
+  left: 30px;
+  display: inline-block;
+  width: 300px;
+}
+</style><style type="text/css">slds-datepicker {
+  display: block;
+  color: #16325c;
+}
+slds-datepicker .month {
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+}
+slds-datepicker .date-error-message {
+  color: red;
+  font-weight: 400;
+}
+slds-datepicker .slds-is-today &gt; .slds-day,
+slds-datepicker .slds-is-selected &gt; .slds-day {
+  font-weight: bold;
+}
+slds-datepicker .print-readonly-style {
+  background-color: #e0e5ee;
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: #a8b7c7;
+  padding: 6px;
+  min-height: 34px;
+}
+slds-datepicker .slds-input-has-icon--right .print-readonly-style {
+  min-width: 150px;
+  padding-right: 34px;
+}
+/* if calendar inside slds-table: keep original cell padding */
+.slds-table slds-datepicker table.datepicker__month tr td,
+.slds-table slds-datepicker table.datepicker__month tr th,
+.slds-table slds-datepicker table.datepicker__month tr td:first-child,
+.slds-table slds-datepicker table.datepicker__month tr th:first-child,
+.slds-table slds-datepicker table.datepicker__month tr td:last-child,
+.slds-table slds-datepicker table.datepicker__month tr th:last-child {
+  padding: 4px;
+}
+.slds-modal__container {
+  transform: none !important;
+  -webkit-transform: none !important;
+  -o-transform: none !important;
+  -moz-transform: none !important;
+}
+</style><style type="text/css">slds-timeframe-picker {
+  display: block;
+}
+slds-timeframe-picker .month {
+  display: inline-block;
+  width: 60px;
+  text-align: center;
+}
+slds-timeframe-picker .date-error-message {
+  color: red;
+  font-weight: 400;
+  margin-left: 10px;
+}
+slds-timeframe-picker .slds-is-today &gt; .slds-day,
+slds-timeframe-picker .slds-is-selected &gt; .slds-day {
+  font-weight: bold;
+}
+slds-timeframe-picker .alldate {
+  padding: 5px 13px 14px;
+}
+slds-timeframe-picker .alldate a.allcheck {
+  display: block;
+  color: #54698d;
+  text-decoration: none;
+}
+slds-timeframe-picker .alldate a.allcheck:focus,
+slds-timeframe-picker .alldate a.allcheck:hover {
+  outline: none;
+  border: 0px;
+  text-decoration: none;
+}
+slds-timeframe-picker .alldate a.allcheck .checkbox-div {
+  background: #fff none repeat scroll 0 0;
+  border: 1px solid #d8dde6;
+  border-radius: 0.125rem;
+  display: inline-block;
+  height: 1rem;
+  position: relative;
+  transition: border 0.1s linear 0s, background-color 0.1s linear 0s;
+  vertical-align: middle;
+  width: 1rem;
+  margin-right: 0.5rem;
+}
+slds-timeframe-picker .alldate a.allcheck .checkbox-div.active:after {
+  border-bottom: 2px solid #1589ee;
+  border-left: 2px solid #1589ee;
+  content: "";
+  display: block;
+  height: 0.25rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0px) rotate(-45deg);
+  width: 0.5rem;
+}
+slds-timeframe-picker .alldate a.allcheck span {
+  line-height: 1.5;
+  display: inline-block;
+}
+slds-timeframe-picker .tabcontent {
+  min-height: 278px;
+}
+slds-timeframe-picker .tabcontent .slds-form-element__control.with-radio {
+  padding: 5px 15px;
+}
+slds-timeframe-picker .tabcontent .slds-form-element__control.with-radio .slds-radio {
+  padding: 5px;
+}
+slds-timeframe-picker .slds-dropdown-trigger {
+  width: 100%;
+}
+/* if calendar inside slds-table: keep original cell padding */
+.slds-table slds-timeframe-picker table.datepicker__month tr td,
+.slds-table slds-timeframe-picker table.datepicker__month tr th,
+.slds-table slds-timeframe-picker table.datepicker__month tr td:first-child,
+.slds-table slds-timeframe-picker table.datepicker__month tr th:first-child,
+.slds-table slds-timeframe-picker table.datepicker__month tr td:last-child,
+.slds-table slds-timeframe-picker table.datepicker__month tr th:last-child {
+  padding: 4px;
+}
+.slds-modal__container {
+  transform: none !important;
+  -webkit-transform: none !important;
+  -o-transform: none !important;
+  -moz-transform: none !important;
+}
+.slds-radio [type="radio"]:checked + .slds-radio--faux::after,
+.slds-radio [type="radio"]:checked + .slds-radio__label .slds-radio--faux::after,
+.slds-radio [type="radio"]:checked ~ .slds-radio--faux::after {
+  background: #1589ee none repeat scroll 0 0;
+  border-radius: 50%;
+  content: "";
+  height: 0.5rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0px);
+  width: 0.5rem;
+}
+.slds-radio [type="radio"]:checked + .slds-radio--faux,
+.slds-radio [type="radio"]:checked + .slds-radio__label .slds-radio--faux,
+.slds-radio [type="radio"]:checked ~ .slds-radio--faux {
+  background: #fff none repeat scroll 0 0;
+}
+.pageloader {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translateY(-50%);
+}
+</style><style type="text/css">.slds-lookup .clickable {
+  cursor: pointer;
+}
+.slds-lookup .wrap-class {
+  word-break: break-all;
+}
+.slds-lookup .slds-lookup__menu.auto,
+.slds-lookup .slds-dropdown.auto {
+  display: block;
+  width: 100% !important;
+  min-width: 240px;
+}
+.slds-lookup .lookup-icon {
+  min-width: 1.25rem;
+}
+.slds-lookup .sub-items {
+  font-size: 12px;
+}
+.slds-lookup .sub-items .sub-item-count {
+  color: #005fb2;
+  font-weight: bold;
+}
+.slds-lookup .sub-items .sub-item {
+  color: #grey;
+  font-weight: bold;
+}
+.slds-lookup .slds-pill__container.slds-pill__container--flex {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.slds-lookup .slds-pill__container .slds-pill {
+  color: #0070d2;
+}
+.slds-lookup .slds-pill__container .slds-pill__label {
+  display: inline-block;
+}
+.slds-lookup .slds-pill__container .slds-pill.slds-pill-wrapped {
+  margin: 2px 2px 0 0;
+}
+.slds-lookup .slds-pill__container.noline {
+  padding: 1px;
+  border: transparent !important;
+}
+.slds-lookup .stretch {
+  max-width: 400px;
+}
+.slds-lookup .stretch .slds-pill__label.has-icon {
+  max-width: 80%;
+}
+.slds-lookup .stretch .slds-pill__label {
+  max-width: 90%;
+}
+.slds-lookup .slds-picklist li.slds-is-selected .slds-icon--selected {
+  fill: #0070d2;
+  opacity: 1;
+}
+.slds-lookup .slds-picklist li .slds-icon--selected {
+  opacity: 0;
+  transition: opacity 50ms ease;
+}
+.slds-lookup .slds-lookup__item-action--label .slds-icon {
+  margin-left: .25rem;
+  margin-right: .75rem;
+}
+.slds-lookup .slds-lookup__item-action .slds-icon {
+  margin-right: .5rem;
+  margin-top: .25rem;
+}
+.slds-lookup .slds-lookup__item-action {
+  font-size: .8125rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .25rem 1rem;
+  color: #16325c;
+  text-align: left;
+  width: 100%;
+  line-height: 1.5;
+  border-radius: 0;
+}
+.slds-lookup .slds-lookup__item-action.slds-has-focus,
+.slds-lookup .slds-lookup__item-action:focus,
+.slds-lookup .slds-lookup__item-action:hover {
+  outline: 0;
+  cursor: pointer;
+  background-color: #f4f6f9;
+  color: #16325c;
+  text-decoration: none;
+}
+.slds-lookup .slds-lookup__item-action .slds-icon {
+  margin-right: .5rem;
+  margin-top: .25rem;
+}
+.slds-lookup .slds-lookup__item-action--label {
+  padding: .5rem 1rem;
+}
+.slds-lookup .slds-lookup__item-action--label .slds-icon {
+  margin-left: .25rem;
+  margin-right: .75rem;
+}
+.slds-lookup .slds-list--horizontal {
+  display: flex;
+  flex-wrap: wrap;
+}
+body &gt; div.slds-lookup__menu.auto {
+  z-index: 9003;
+}
+</style><style type="text/css">.icon-div {
+  float: left;
+  margin-right: 15px;
+}
+.icon-div &gt; img {
+  padding: 5px;
+  border-radius: 3px;
+}
+.text-content {
+  overflow: hidden;
+}
+slds-header .slds-text-heading--label {
+  line-height: 10px;
+}
+slds-header .slds-text-heading--medium {
+  line-height: 30px;
+}
+slds-header .text-content.text-content--v-align {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+slds-header .request-status-text {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+slds-header .request-status-text--pass {
+  color: #5BD185;
+}
+slds-header .request-status-text--fail {
+  color: #C23934;
+}
+slds-header .slds-text-body--strong {
+  font-weight: bold;
+}
+slds-header .right-side-subtitle .inner-subtitle {
+  font-size: 14px;
+}
+.slds-page-header__title {
+  font-weight: 400 !important;
+  margin-top: 2px !important;
+}
+@media (min-width: 48em) {
+  .slds-page-header__title {
+    font-size: 1.25rem !important;
+  }
+}
+</style><style type="text/css"></style><style type="text/css">slds-table .slds-table td.col-force-wrap,
+slds-table .slds-table th.col-force-wrap {
+  word-wrap: break-word;
+  white-space: normal;
+}
+slds-table .slds-table .slds-truncate {
+  max-width: 100% !important;
+}
+slds-table table.fixed-table-layout {
+  table-layout: fixed;
+}
+slds-table .slds-table--bordered:not(.slds-no-row-hover) tr:hover &gt; td,
+slds-table .slds-table--bordered:not(.slds-no-row-hover) tr:hover &gt; th {
+  box-shadow: none;
+}
+slds-table .slds-table--bordered.no-border-outside {
+  border-top: none;
+  border-bottom: none;
+}
+slds-table .slds-dropdown-trigger .slds-dropdown ul li {
+  text-align: left;
+}
+slds-table .slds-is-sortable,
+slds-table .clickable {
+  cursor: pointer;
+}
+slds-table tr.slds-text-heading--label.notransform {
+  text-transform: inherit;
+}
+slds-table tr.slds-text-heading--label.notransform th {
+  padding-bottom: 2px;
+}
+slds-table tr.vertical-align--top td,
+slds-table td.vertical-align--top,
+slds-table th.vertical-align--top {
+  vertical-align: top;
+}
+slds-table tr.vertical-align--middle td,
+slds-table td.vertical-align--middle,
+slds-table th.vertical-align--middle {
+  vertical-align: middle !important;
+}
+slds-table tr.vertical-align--bottom,
+slds-table td.vertical-align--bottom,
+slds-table th.vertical-align--bottom {
+  vertical-align: bottom !important;
+}
+slds-table td.truncate-upload-cell {
+  width: 17%;
+  white-space: nowrap;
+}
+slds-table tr.vertical-align--top td.slds-row-action {
+  padding-top: 12px;
+}
+slds-table tr.vertical-align--top input[type=checkbox] {
+  margin-top: 10px;
+}
+slds-table input.slds-input[type=number] {
+  text-align: right;
+  padding-right: 0;
+}
+slds-table .posr,
+slds-table .relative {
+  position: relative;
+}
+slds-table td.wrap-text {
+  white-space: normal;
+}
+slds-table td.wrap-text &gt; span {
+  white-space: pre-line;
+}
+slds-table .slds-file-selector__dropzone.ng-invalid,
+slds-table label.slds-radio .slds-radio--faux.ng-invalid {
+  background-color: #fff;
+  border-color: #c23934 !important;
+  box-shadow: #c23934 0 0 0 1px inset;
+  background-clip: padding-box;
+}
+slds-table table.slds-table.transparent {
+  background-color: inherit;
+}
+slds-table table.slds-table.transparent td.read-only {
+  border-bottom: 1px solid #d8dde6;
+}
+slds-table table.slds-table.alternate tr.odd {
+  background-color: #f9f9f9;
+}
+slds-table table.slds-table .slds-select,
+slds-table table.slds-table .slds-input {
+  min-width: 90px;
+}
+slds-table .slds-table--bordered:not(.slds-no-row-hover) tbody tr:hover &gt; td,
+slds-table .slds-table--bordered:not(.slds-no-row-hover) tbody tr:hover &gt; th {
+  box-shadow: none;
+}
+slds-table .slds-dropdown-trigger .slds-dropdown ul li {
+  text-align: left;
+}
+slds-table td.slds-table__cell {
+  position: initial;
+}
+slds-table .wrap {
+  word-wrap: break-word;
+}
+slds-table .table-scroll-x {
+  overflow-x: scroll;
+}
+slds-table .table-scroll-y {
+  overflow-y: scroll;
+  max-height: inherit;
+}
+slds-table .v-align-middle {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+slds-table .inlineBlock,
+slds-table .inline-block {
+  display: inline-block;
+}
+slds-table .table-button {
+  padding: 2px !important;
+}
+.borderColor {
+  border-color: green !important;
+}
+.borderColor input[type="text"],
+.borderColor .slds-pill_container,
+.borderColor .slds-checkbox--faux,
+.borderColor .slds-radio--faux,
+.borderColor .slds-select,
+.borderColor .slds-input,
+.borderColor .slds-textarea {
+  border-color: green !important;
+}
+</style><style type="text/css">.slds-notify_container.bottom {
+  top: auto !important;
+  bottom: 50px;
+}
+.slds-notify_container.center,
+.slds-notify_container.middle {
+  top: 45% !important;
+}
+.slds-notify_container .pre-text {
+  white-space: pre-line;
+}
+</style><style type="text/css">.slds-notification-container {
+  position: fixed;
+  display: block;
+  width: 20.5rem;
+  right: 0.25rem;
+  top: 0.25rem;
+  padding: 0.25rem 0.25rem 0.5rem;
+  z-index: 8500;
+}
+.slds-notification {
+  position: relative;
+  width: 20rem;
+  border: 1px solid #ecebea;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+  transition-property: margin, max-height, opacity, top;
+}
+.slds-media {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+.slds-notification .slds-media__body {
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+.slds-notification + .slds-notification {
+  margin-top: 0.5rem;
+}
+.slds-notification:nth-of-type(1) {
+  z-index: 4;
+}
+.slds-notification:nth-of-type(2) {
+  z-index: 3;
+}
+.slds-notification:nth-of-type(3) {
+  z-index: 2;
+}
+.slds-notification:nth-of-type(4) {
+  z-index: 1;
+}
+.slds-notification:nth-of-type(n+3) {
+  overflow: hidden;
+}
+.slds-notification:nth-of-type(n+4) {
+  margin-top: 0;
+  transform: scaleX(0.95) translateY(-90%);
+}
+.slds-notification:nth-of-type(n+4) .slds-media__body,
+.slds-notification:nth-of-type(n+5) {
+  opacity: 0;
+}
+.slds-notification:nth-of-type(n+6) {
+  display: none;
+}
+.slds-notification__target {
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  background-color: #f4f6f9;
+  color: #3e3e3c !important;
+}
+.slds-notification__target:hover,
+.slds-notification__target:focus {
+  background-color: white;
+  text-decoration: none;
+}
+.slds-notification__footer {
+  padding: 0.75rem 0.75rem 1rem 0.75rem;
+}
+.slds-notification__close {
+  position: absolute !important;
+  top: 0;
+  right: 0;
+}
+.slds-button--icon-container {
+  background-color: #d8edff;
+  border-color: #0070d2;
+  color: white;
+}
+</style><style type="text/css">.slds-checkbox [type="checkbox"][disabled] + .slds-checkbox--faux:after,
+.slds-checkbox [type="checkbox"][disabled] ~ .slds-checkbox--faux:after {
+  border-color: #888 !important;
+}
+.slds-checkbox .clickable {
+  cursor: pointer;
+}
+@media print {
+  .slds-checkbox [type="checkbox"][disabled] + .slds-checkbox--faux:after,
+  .slds-checkbox [type="checkbox"][disabled] ~ .slds-checkbox--faux:after {
+    border-color: black !important;
+  }
+  .slds-checkbox .slds-checkbox--faux {
+    text-align: center;
+    font-size: 8pt;
+  }
+}
+</style><style type="text/css">stencil-image .stencil {
+  position: fixed;
+  top: 125px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 125px);
+  z-index: 1;
+}
+stencil-image .stencil.high-index {
+  z-index: 9999;
+}
+stencil-image .stencil .slds-spinner_container {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+stencil-image .stencil .content-section {
+  background-color: #fff;
+  position: relative;
+  height: 100%;
+}
+stencil-image .stencil .content-section .task-section {
+  margin-top: 0;
+  padding-top: 0;
+}
+stencil-image .stencil .content-section .task-section .task-right {
+  top: 0;
+}
+stencil-image .stencil .content-section.back-opaque:before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&amp;0+0,1+100 */
+  background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+  /* IE6-9 */
+}
+stencil-image .stencil .content-section .table {
+  display: table;
+  width: 100%;
+}
+stencil-image .stencil .content-section .table .table-row {
+  display: table-row;
+}
+stencil-image .stencil .content-section .table .table-row.align-middel-center .table-cell {
+  vertical-align: middle;
+  text-align: center;
+}
+stencil-image .stencil .content-section .table .table-row .table-cell {
+  display: table-cell;
+  height: 43px;
+  padding: 10px;
+  border-bottom: 1px solid #DFE3EA;
+  min-width: 100px;
+}
+stencil-image .stencil .content-section .table .table-row .table-cell.background-mask:before {
+  left: 15px;
+  max-width: 90%;
+}
+stencil-image .stencil .content-section .table .table-row .table-cell:first-child {
+  width: 36%;
+}
+stencil-image .stencil .content-section .table .table-row .table-cell.table-head {
+  height: 33px;
+}
+stencil-image .stencil .content-section .table .table-row .table-cell.table-head.background-mask:before {
+  height: 4px;
+}
+stencil-image .stencil .content-section .input {
+  background-color: #F4F6F9;
+  border-radius: 3px;
+  height: 36px;
+}
+stencil-image .stencil .content-section .textarea {
+  background-color: #F4F6F9;
+  border-radius: 3px;
+  height: 136px;
+}
+stencil-image .stencil .content-section .select {
+  background-color: #F4F6F9;
+  border-radius: 3px;
+  height: 36px;
+  max-width: 350px;
+}
+stencil-image .stencil .content-section label {
+  min-height: 20px;
+  display: block;
+  max-width: 240px;
+  width: 100%;
+}
+stencil-image .stencil .content-section label.heading {
+  max-width: 100px;
+}
+stencil-image .stencil .content-section .checkbox {
+  position: relative;
+  padding-left: 24px;
+}
+stencil-image .stencil .content-section .checkbox:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  display: block;
+  height: 18px;
+  background-color: #F4F6F9;
+  border-radius: 3px;
+}
+stencil-image .stencil .content-section .radio {
+  position: relative;
+  padding-left: 24px;
+}
+stencil-image .stencil .content-section .radio:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  display: block;
+  height: 18px;
+  background-color: #F4F6F9;
+  border-radius: 3px;
+  border-radius: 50%;
+}
+stencil-image .stencil .content-section .tab-section {
+  border: 1px solid #D7DCE5;
+  border-radius: 3px;
+  margin-top: 4px;
+  min-height: 156px;
+}
+stencil-image .stencil .content-section .tab-section .slds-tabs--scoped__content {
+  width: 100%;
+  float: left;
+  border: 0;
+}
+stencil-image .stencil .content-section .tab-section .slds-tabs--scoped__content .checkbox {
+  margin-bottom: 5px;
+}
+stencil-image .stencil .content-section .tab-section.noborder {
+  border: 0px;
+}
+stencil-image .stencil .content-section .tab-section ul.tablist {
+  border-bottom: 1px solid #D7DCE5;
+}
+stencil-image .stencil .content-section .tab-section ul.tablist li {
+  display: inline-block;
+  height: 40px;
+  padding: 0 17px;
+  width: 19%;
+}
+stencil-image .stencil .content-section .tab-section ul.tablist li label {
+  height: 41px;
+  display: block;
+}
+stencil-image .stencil .content-section .tab-section.full-height {
+  height: 700px;
+}
+stencil-image .stencil .content-section button {
+  background-color: #E0E4ED;
+  height: 37px;
+  width: 90px;
+  display: block;
+  margin-right: 3px;
+  border: 0;
+  border-radius: 3px;
+}
+stencil-image .stencil .content-section button[type=reset] {
+  background-color: #F0F2F6;
+}
+stencil-image .stencil .content-section .partner-deck .partner-cards-wrap {
+  float: left;
+}
+stencil-image .stencil .content-section .partner-deck .partner-cards-wrap .partner-card {
+  width: 235px;
+  margin: 0 8px 16px;
+  height: 193px;
+  border-radius: 4px;
+  background-color: #f4f6f9;
+  border: 1px solid #d8dde6;
+}
+stencil-image .stencil .content-section .partner-deck .partner-cards-wrap .partner-card:first-child {
+  margin-left: 0;
+}
+stencil-image .stencil .background-mask {
+  position: relative;
+}
+stencil-image .stencil .background-mask:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8px;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #DFE3EA;
+}
+stencil-image .stencil .background-mask.contents:before {
+  height: 3px;
+}
+</style><style type="text/css">button.slds-button.svg-button.with-loader {
+  width: 68px;
+  height: 36px;
+  text-align: center;
+}
+button.slds-button.svg-button.with-loader span.loading {
+  display: inline-block;
+  opacity: 1;
+  visibility: visible;
+  animation-name: spin;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+button.slds-button.svg-button.link-button {
+  padding: 0;
+}
+button.slds-button.svg-button.link-button a {
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+button.slds-button.svg-button.slds-button--brand a {
+  color: white;
+}
+button.slds-button.svg-button.slds-button--brand[disabled] {
+  background-color: #898C8E;
+}
+button.slds-button.svg-button.small-button {
+  font-size: 10px;
+  font-weight: bold;
+  padding-left: 4px;
+  padding-right: 4px;
+  line-height: 2;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style><style type="text/css"></style><style type="text/css">.slds-page-header .icon-div {
+  background-color: #64bdf4;
+}
+.slds-title-heading {
+  font-size: 10px;
+  color: #999999;
+}
+.slds .slds-tree__item a {
+  color: #0070d2;
+}
+.right {
+  overflow-y: scroll;
+  width: 500px;
+}
+.slds table {
+  border-collapse: unset;
+}
+.CellComment {
+  width: auto !impprtant;
+  min-width: 60px !important;
+  max-width: 500px !important;
+  margin-top: 10px !important;
+}
+.change-field {
+  color: #ef8d22;
+}
+.change-green {
+  color: green;
+}
+.change-orange {
+  color: orange;
+}
+.change-red {
+  color: red;
+}
+button:focus {
+  outline: 0;
+}
+.slds slds-table td {
+  padding: 5px !important;
+}
+.no-chevron {
+  padding-left: 2px;
+}
+#container1 {
+  float: left;
+  width: 22%;
+  max-height: 550px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+#container2 {
+  width: 78%;
+  max-height: 550px;
+  overflow: auto;
+}
+.checkboxHighlight {
+  background: #ef8d22;
+  box-shadow: inset 1px 1px 2px #ef8d22, 1px 1px 1px #ef8d22;
+}
+</style><script src="/jslibrary/1543986924000/sfdc/main.js" type="text/javascript"></script><script src="/jslibrary/jslabels/1545327730000/en_US.js" type="text/javascript"></script><link class="user" href="/apexpages/slds/latest/assets/styles/salesforce-lightning-design-system-vf.min.css" rel="stylesheet" type="text/css" /><script>(function(UITheme) {
+    UITheme.getUITheme = function() { 
+        return UserContext.uiTheme;
+    };
+}(window.UITheme = window.UITheme || {}));</script><script type="text/javascript">
+Visualforce.remoting.Manager.add(new $VFRM.RemotingProviderImpl({"vf":{"vid":"0661I000003YxuV","xhr":false,"dev":false,"tst":false,"dbg":false,"tm":1545884225218,"isdtp":"p1","ovrprm":true},"actions":{"ICIX_V1.TaskListController":{"ms":[{"name":"cancelRequestByTaskId","len":1,"ns":"ICIX_V1","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHpNRlF3TkRveE56b3dOUzR5TVRoYSxoQm5wX3kwaHB3MnlsMU9YQVhBX2FaLE9HVTNNbU0z"},{"name":"closeSelectedTasks","len":1,"ns":"ICIX_V1","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHpNRlF3TkRveE56b3dOUzR5TVRoYSxQNlJxOUk5Sk5mWTlUWXBHckZidUEtLE5XUTVNR1Ex"},{"name":"deleteListView","len":1,"ns":"ICIX_V1","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHpNRlF3TkRveE56b3dOUzR5TVRoYSx5MEV3eW9QX2k3WTF2WlpNbkpaYkF4LE1qQXlNRE01"},{"name":"fetchTasksList","len":8,"ns":"ICIX_V1","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHpNRlF3TkRveE56b3dOUzR5TVRoYSxjemxzS0s0cjdZaFFSYmJXejd1T0FjLE5HUTNOV1Ux"},{"name":"getDefaultListViewConfig","len":0,"ns":"ICIX_V1","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHpNRlF3TkRveE56b3dOUzR5TVRoYSxGUGFJNUw4MlJNSDVyTDFYVDhoOW14LE0yUTBOak5q"},{"name":"getListViews","len":0,"ns":"ICIX_V1","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHpNRlF3TkRveE56b3dOUzR5TVRoYSxNU0h2ZXhHbmRUUzcydVd0eVQtbFhxLFkyRXlOamM0"},{"name":"getModalFilterData","len":0,"ns":"ICIX_V1","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHpNRlF3TkRveE56b3dOUzR5TVRoYSx2NGdjazB6cWt5azhoZk1mVmJXM3BhLE9USm1Nemhp"},{"name":"reopenTask","len":3,"ns":"ICIX_V1","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHpNRlF3TkRveE56b3dOUzR5TVRoYSxhWVF5ajdsWHUxcHpzV2cwblBTcmNILFpHVXhORGs0"},{"name":"retrieveCARRequests","len":1,"ns":"ICIX_V1","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHpNRlF3TkRveE56b3dOUzR5TVRoYSxDSmNLeHFZeTFSNzlyTHRNd3pzUzlXLE56ZzFNbVkz"},{"name":"saveListView","len":10,"ns":"ICIX_V1","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHpNRlF3TkRveE56b3dOUzR5TVRsYSxYdXZUbEF6TTh4N3phU19uZ2R4YXBrLE1UWmtNR015"},{"name":"searchForms","len":1,"ns":"ICIX_V1","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHpNRlF3TkRveE56b3dOUzR5TVRsYSxCSEo4UUtEU2Z3VXRpeGdmdmFhVFl4LE56bGxPRFU0"},{"name":"searchProducts","len":1,"ns":"ICIX_V1","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHpNRlF3TkRveE56b3dOUzR5TVRsYSxGV2NoUWlMaEM0RVd4UklhZ3B4RFhPLE16azBZVEE0"},{"name":"searchTradingPartner","len":1,"ns":"ICIX_V1","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHpNRlF3TkRveE56b3dOUzR5TWpCYSxITklHZWVJajdKX2dfTFNnTFdNY2ZILE5UbGpOV1Ez"},{"name":"searchUPRelationshipAttribute","len":2,"ns":"ICIX_V1","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHpNRlF3TkRveE56b3dOUzR5TWpCYSxIRmt0WW51TV9JV1gyRVVFeXJ2QmNXLFlqUTRObVV5"},{"name":"searchUPRelationshipTag","len":1,"ns":"ICIX_V1","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHpNRlF3TkRveE56b3dOUzR5TWpCYSxZaTJVRG11WlR4ajI0dXNfbngyb3F5LFpERmpNekE0"},{"name":"searchUsers","len":1,"ns":"ICIX_V1","ver":36.0,"csrf":"VmpFPSxNakF4T0MweE1pMHpNRlF3TkRveE56b3dOUzR5TWpCYSxXQlctWWQ4THVlNTdDS1hhY09lbHVuLFl6a3pNMkpq"}],"prm":1}},"service":"apexremote"}));
+</script><meta http-equiv="PRAGMA" content="NO-CACHE" />
+<meta http-equiv="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+  <title>My Tasks</title></head><body class="slds-scope ng-scope  ext-webkit ext-chrome" ng-controller="TaskListCtrl"><span id="j_id0:j_id2">
+
+<script type="text/javascript">
+var sf_design_system = {
+    assetsDir:"/apexpages/slds/latest/assets/",
+    iconsDir: "/apexpages/slds/latest/assets/icons/",
+    customIconsDir: "/resource/1544435284000/icix_v1__customiconimages",
+    imageDir: "/apexpages/slds/latest/assets/images/",
+    symbols:  "/apexpages/slds/latest/assets/icons/action-sprite/svg/symbols.svg",
+    action:   "/apexpages/slds/latest/assets/icons/action-sprite/svg/symbols.svg",
+    custom:   "/apexpages/slds/latest/assets/icons/custom-sprite/svg/symbols.svg",
+    doctype:  "/apexpages/slds/latest/assets/icons/doctype-sprite/svg/symbols.svg",
+    standard: "/apexpages/slds/latest/assets/icons/standard-sprite/svg/symbols.svg",
+    utility:  "/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg"
+};
+
+//decode JSON object encoded with JSENCODE
+function jsonDecode(obj)
+{
+    if(window.angular)
+        return angular.fromJson(obj);
+    return JSON.parse(decodeURI(obj));
+}
+</script></span>
+
+  <style type="text/css">
+    html,body{height: 100%;}
+    header{background-color:rgb(244, 246, 249); padding:2rem 2rem 1rem; border-bottom: 1px solid rgb(216, 221, 230);}
+    header .task-name{display: block; text-transform: uppercase; font-size: .75rem; line-height: 1.25; color: rgb(84, 105, 141); letter-spacing: .0625rem;}
+    header h3{float: left;}
+    header .slds-dropdown-trigger{float: left; margin-top: 8px; margin-left: 5px;}
+    header .slds-dropdown-trigger button.slds-button--icon-border-filled{border:0px;background: none transparent;}
+    header .slds-dropdown-trigger button.slds-button--icon-border-filled:hover{background: none transparent;}
+    header .slds-dropdown-trigger button.slds-button--icon-border-filled:focus{outline: none; box-shadow: none; background:none transparent;}
+    header .slds-dropdown-trigger button.slds-button--icon-x-small .slds-button__icon{height: 18px; width:18px;}
+    header .searchicon{margin-top: 20px; float: right; color: #16325c !important;}
+    header .filter-link-container{padding: 10px; color: #0070d2;}
+    header .modal-body{padding: 3% 3% 3% 3%;}
+    header .modal-body-section{padding-top: 3%;}
+    .task-section{height: 100%; width: 100%; margin-top: -103px; padding-top: 103px; display: block; background-color: #EEF1F6;}
+    .task-left{height: 100%; display: block; margin-right: 420px; border-right:1px solid #DBE0E8; vertical-align: top;}
+    .task-left td{vertical-align: top;}
+    .task-right{width: 420px; vertical-align: top; display: block; padding: 12px; border-top:1px solid #DBE0E8; position: absolute; right: 0; top: 103px; height: calc(100% - 103px);}
+    .taskin{height: 100%; overflow-y: auto; background: #fff;}
+    .task-right .taskin{border: 1px solid #DBE0E8; border-radius: 3px; height: auto; max-height: 100%;}
+    /*.task-right .taskin a{display: block;
+    line-height: 17px !important;
+    padding-bottom: 4px;}*/
+    .task-left table tr &gt; td:first-child{width: 43px; padding-left: 25px;}
+    .task-left table tr &gt; td:last-child{right; padding-right: 24px;}
+    .task-right .taskin .block{padding: 15px 25px; float: left; width: 100%;}
+    .red{color: #c23934}
+    .green{color: #4bca81}
+    .grey{color: #9faab5}
+    .task-left .slds-badge.success{background:#4bca81; color: #fff; text-transform: capitalize;}
+    .slds-badge.success{background:#4bca81; color: #fff; text-transform: capitalize;}
+    .bottomborder{border-bottom: 1px solid #d8dde6;}
+    .slds-text-title{display: block;}
+    .slds-text-title i{font-style: inherit;}
+    .task-left .slds-text-title{font-size: 0.75rem; line-height: 11px; padding-top: 3px;}
+    .slds-button-group{padding-top: 15px; position: relative;}
+    .task-right .taskin .block .titles{font-size: 16px;}
+    .task-right .taskin .block .top-title{line-height: 1.3; margin-bottom: 4px;}
+    /*AP-21*/
+    .task-right .nameColor{color:#0070d2;}
+    .task-right .markAsCompleted{margin-bottom: 4%;}
+    .task-left .dueDateTd{float: right;}
+    .task-left .cursorChange{cursor: pointer;}
+    /*AP-21*/
+    .message{display: block; margin-top: 15px; font-size:15px;}
+    .message.reject{color: #c23934;}
+    .message.reject .slds-icon_container .slds-icon{fill:#c23934;}
+    .message.approve{color: #4bca81;}
+    .message.approve .slds-icon_container .slds-icon{fill:#4bca81;}
+    .message.canceled{color: #9faab5;}
+    .message.canceled .slds-icon_container .slds-icon{fill: #9faab5;}
+    .message .slds-icon_container .slds-icon{width: 18px; height: 18px; float:left; margin-right:0px;}
+    .message .slds-icon_container{display: inline-block; vertical-align: middle; height: 20px;}
+    .message p{font-style: italic; line-height:17px; padding-top:3px; font-size: 14px;}
+    .message .slds-text-title{padding-bottom: 1px; line-height:15px; font-weight:bold; font-size:16px;}
+    .task-left table tr.active &gt; td:first-child{border-left:1px solid #0070d2;}
+    .task-left table tr.active &gt; td:last-child{border-right:1px solid #0070d2;}
+    .task-left table tr.active &gt; td{border-top:1px solid #0070d2;border-bottom:1px solid #0070d2; background-color: #F0F8FC;}
+    .task-left table{border-collapse:inherit;}
+    .slds-form-element .slds-form-element__label{display: block; margin-bottom:0;}
+    .half-section{display:inline-block; width:49%; vertical-align:top;}
+    .slds-form-element{padding:10px 0; border-bottom:1px solid #d8dde6;}
+    .slds-form-element.last{border-bottom:0; padding-bottom:0;}
+    .strike{text-decoration:line-through;}
+    .product{margin-top:-10px;}
+    .two-third-section{width:65%; vertical-align:top; display:inline-block;}
+    .one-third-section{width:33%; vertical-align:top; display:inline-block;}
+    .documents{padding-top:22px;}
+    .documents &gt; .slds-form-element{padding:2px 0;}
+    .documents &gt; .slds-form-element.noborder{border-bottom:0; padding-bottom:0;}
+    .noborderpadding{padding-bottom:0; border-bottom:0;}
+    .block .slds-button-group{padding-bottom:5px;}
+    .task-left table a:focus{outline: none;}
+    .clearfix{clear: both;}
+    .slds-button.slds-button--neutral.ng-scope.indropdown{position: absolute; top: 100%; left: 162px;border-left:1px solid #d8dde6; border-radius: 4px;display: none; min-width: 158px; z-index: 999;}
+    .slds-button.slds-button--neutral.ng-scope.indropdown.reject{border-radius:4px 4px 0 0px}
+    .slds-button.slds-button--neutral.ng-scope.indropdown.fail-resolved{top:86px; border-radius: 0 0 4px 4px; padding-left: 12px; padding-right: 12px;}
+    .slds-button.slds-button--neutral.ng-scope.indropdown.withreject + .withreject{border-radius:0px 0px 4px 4px}
+    .slds-button.slds-button--neutral.ng-scope.indropdown.active{display: block;}
+        .notask{display:block; padding-top:25px; text-align:center;}
+        .notask p{font-size:15px;}
+        .task-right .taskin .block .titles, .task-right .taskin .block .titles a,  ul li a.related_Req{display: block;
+    line-height: 1.35 !important;
+    padding-bottom: 4px;}
+         ul li a.related_Req{display: inline-block;}
+    .task-left table tr td .slds-truncate.task-details{height: 16px;}
+    .slds-checkbox.disable{pointer-events: none;}
+    .slds-checkbox:hover{cursor: pointer;}
+    .slds-checkbox.disable:hover{cursor: none;}
+    .slds-truncate.docnametruncation{max-width: 177px; display: inline-block;}
+    .slds-truncate.docnametruncation span{max-width: 100%;
+    overflow: hidden; display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;}
+    .fadediv{
+        -webkit-animation: fadeinout 0.7s linear 1 forwards;
+        animation: fadeinout 0.7s linear 1 forwards;
+    }
+    .background-product-icon{
+        background-color: #f28b00;
+        fill: white !important;
+    }
+    .background-tp-icon{
+        background-color: #5876a3;
+        fill: white !important;
+    }
+    .background-user-icon{
+        background-color: #7e8be4;; 
+        fill: white !important;
+    }
+    .background-form-icon{
+        background-color: #88C651;
+        fill: white !important;
+    }
+    .margin-style {
+        margin-left: -8px;
+    }
+    .childRequest {
+        height: 70px;
+        padding-top:26px
+    }
+    .groupnumberlabel {
+         float: left; 
+         display: block; 
+         padding-top: 16px
+    }
+
+    @-webkit-keyframes fadeinout {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes fadeinout {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+      
+    .task-left table tr td .slds-truncate.task-details{max-width:900px; display: block;}    
+
+    @media only screen and (max-width: 1023px)
+    {
+        .task-left table tr td .slds-badge.success{display: inline-block;}
+        .slds-table .slds-truncate{display: block;}
+        .task-left{margin-right: 0; width: 100%;}
+        .task-right{width: 100%; position: static;}
+        .mobile-block{display: block;}
+        .task-left table tr td .slds-truncate.task-details{max-width:175px; display: block;}
+        header{padding:17px 2rem 0; padding-left: 24px;}
+        header &gt; div.slds-grid.slds-p-left--x-large{padding-left: 0;}
+        header .slds-button.searchicon{margin-top: 0;}
+        header .task-name{display: none;}
+        header .slds-button.searchicon .slds-button__icon{vertical-align: top;}
+        header h3.slds-text-heading--medium{font-size: 13px;}
+        header .slds-dropdown-trigger{margin-top: 0;}
+        header .slds-dropdown-trigger .slds-button--icon-x-small{height: 17px; width: 17px; vertical-align: top;}
+        .task-section{margin-top: -52px; padding-top: 52px;}
+        .task-right{left:100%; position: absolute; background-color:#EEF1F6; transition:all 0.5s ease 0s; top: 52px; height: calc(100% - 52px); opacity: 0;}
+        .task-right.slideleft{left: 0; opacity: 1; height: 100%; overflow-y: auto;}
+        /*AP-89*/
+        .mobile-filtering-letter{font-size: 12px !important;}
+        .mobile-header-letter{font-size: 14px !important;}
+    }
+    a.strike{text-decoration: line-through; }
+  </style>
+
+
+
+      <!-- ngIf: stencils --><stencil-image bg-opacity="0" header-height="103" ng-if="stencils" stencil-for="'taskList'" class="ng-scope ng-isolate-scope"><div class="stencil high-index" ng-style="vm.style" ng-class="{'high-index' : vm.stencilFor === 'productConnect' || vm.stencilFor === 'partnerConnect' || vm.stencilFor === 'taskList'}" style="top: 103px; height: calc(100% - 103px);">
+
+<!-- ngIf: vm.stencilFor === 'documentLibrary' -->
+
+<!-- ngIf: vm.stencilFor === 'testingProgram' -->
+
+<!-- ngIf: vm.stencilFor === 'tpGroups' -->
+
+<!-- ngIf: vm.stencilFor === 'findProduct' -->
+
+<!-- ngIf: vm.stencilFor === 'partner' -->
+
+<!-- ngIf: vm.stencilFor === 'request' -->
+
+<!-- ngIf: vm.stencilFor === 'preference' -->
+
+<!-- ngIf: vm.stencilFor === 'partnerCards' -->
+
+<!-- ngIf: vm.stencilFor === 'productResult' -->
+
+<!-- ngIf: vm.stencilFor === 'productConnect' -->
+
+<!-- ngIf: vm.stencilFor === 'partnerConnect' -->
+
+<!-- ngIf: vm.stencilFor === 'testCategory' -->
+
+<!-- ngIf: vm.stencilFor === 'partnerCompliance' -->
+
+<!-- ngIf: vm.stencilFor === 'taskList' --><div class="content-section back-opaque ng-scope" ng-if="vm.stencilFor === 'taskList'">
+	<div class="task-section">
+		<div class="task-left">
+			<div class="taskin">
+				<table class="slds-table slds-table--bordered">
+					<tbody>
+						<tr class="slds-hint-parent">
+							<td class="slds-row-select">
+								<div class="checkbox"></div>
+							</td>
+							<td>
+								<label class="slds-form-element__label background-mask"></label>
+								<label class="slds-form-element__label background-mask heading"></label>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+							<td class="slds-row-select">
+								<div class="checkbox"></div>
+							</td>
+							<td>
+								<label class="slds-form-element__label background-mask"></label>
+								<label class="slds-form-element__label background-mask heading"></label>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+							<td class="slds-row-select">
+								<div class="checkbox"></div>
+							</td>
+							<td>
+								<label class="slds-form-element__label background-mask"></label>
+								<label class="slds-form-element__label background-mask heading"></label>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+							<td class="slds-row-select">
+								<div class="checkbox"></div>
+							</td>
+							<td>
+								<label class="slds-form-element__label background-mask"></label>
+								<label class="slds-form-element__label background-mask heading"></label>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+							<td class="slds-row-select">
+								<div class="checkbox"></div>
+							</td>
+							<td>
+								<label class="slds-form-element__label background-mask"></label>
+								<label class="slds-form-element__label background-mask heading"></label>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+							<td class="slds-row-select">
+								<div class="checkbox"></div>
+							</td>
+							<td>
+								<label class="slds-form-element__label background-mask"></label>
+								<label class="slds-form-element__label background-mask heading"></label>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+							<td class="slds-row-select">
+								<div class="checkbox"></div>
+							</td>
+							<td>
+								<label class="slds-form-element__label background-mask"></label>
+								<label class="slds-form-element__label background-mask heading"></label>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+							<td class="slds-row-select">
+								<div class="checkbox"></div>
+							</td>
+							<td>
+								<label class="slds-form-element__label background-mask"></label>
+								<label class="slds-form-element__label background-mask heading"></label>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+							<td class="slds-row-select">
+								<div class="checkbox"></div>
+							</td>
+							<td>
+								<label class="slds-form-element__label background-mask"></label>
+								<label class="slds-form-element__label background-mask heading"></label>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+							<td class="slds-row-select">
+								<div class="checkbox"></div>
+							</td>
+							<td>
+								<label class="slds-form-element__label background-mask"></label>
+								<label class="slds-form-element__label background-mask heading"></label>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+							<td class="slds-row-select">
+								<div class="checkbox"></div>
+							</td>
+							<td>
+								<label class="slds-form-element__label background-mask"></label>
+								<label class="slds-form-element__label background-mask heading"></label>
+							</td>
+						</tr>
+						<tr class="slds-hint-parent">
+							<td class="slds-row-select">
+								<div class="checkbox"></div>
+							</td>
+							<td>
+								<label class="slds-form-element__label background-mask"></label>
+								<label class="slds-form-element__label background-mask heading"></label>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="task-right">
+			<div class="taskin">
+				<div style="height: 100%; overflow-y: auto;">
+					<div class="block bottomborder">
+						<label class="slds-form-element__label background-mask"></label>
+						<label class="slds-form-element__label background-mask heading"></label>
+						<label class="slds-form-element__label background-mask subheading"></label>
+
+						<div class="message">
+							<label class="slds-form-element__label background-mask heading"></label>
+							<label class="slds-form-element__label background-mask contents"></label>
+						</div>
+					</div>
+					<div class="block"> 
+						<div class="product">
+							<div class="slds-form-element">
+								<label class="slds-form-element__label background-mask"></label>
+								<label class="slds-form-element__label background-mask contents"></label>
+							</div>
+							<div class="slds-form-element">
+								<label class="slds-form-element__label background-mask"></label>
+								<label class="slds-form-element__label background-mask contents"></label>
+							</div>
+							<div class="slds-form-element">
+								<label class="slds-form-element__label background-mask"></label>
+								<label class="slds-form-element__label background-mask contents"></label>
+							</div>
+							<div class="slds-form-element">
+								<label class="slds-form-element__label background-mask"></label>
+								<label class="slds-form-element__label background-mask contents"></label>
+							</div>
+						</div>
+					</div>
+					<div class="block">
+						<label class="slds-form-element__label background-mask"></label>
+						<label class="slds-form-element__label background-mask contents"></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div><!-- end ngIf: vm.stencilFor === 'taskList' -->
+
+<!-- SPINNER -->
+<div class="slds-spinner_container" ng-style="vm.bgstyle" style="background-color: rgba(255, 255, 255, 0);">
+	<div role="status" class="slds-spinner slds-spinner--medium slds-spinner--brand">
+		<span class="slds-assistive-text">Loading</span>
+		<div class="slds-spinner__dot-a"></div>
+		<div class="slds-spinner__dot-b"></div>
+	</div>
+</div>
+<!-- end spinner -->
+</div></stencil-image><!-- end ngIf: stencils -->
+    
+      <!-- ngIf: loading -->
+    
+    <!-- ngIf: !slideTrue --><header ng-if="!slideTrue" class="ng-scope">
+        <div class="slds-grid slds-wrap margin-style" style="padding-left:0px !important;">
+            <div class="slds-col slds-size--3-of-12">
+                <label class="task-name">ICIX Tasks</label>
+                <div class="slds-grid">
+                  <div class="slds-grid slds-type-focus slds-no-space">
+                    
+                    <h1 class="slds-page-header__title slds-text-color--default slds-p-right--x-small mobile-header-letter ng-binding">Open</h1>
+                    
+                    <div class="slds-dropdown-trigger slds-dropdown-trigger--click slds-is-open">
+                        <button aria-haspopup="true" class="slds-button slds-button--icon-border-filled slds-button--icon-x-small" id="taskDropdown" ng-click="dropdown(); $event.stopPropagation();">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="slds-button__icon" style="height: ;" icon="down" svg="utility">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#down" style="color: ; fill: ;"/>
+</svg>
+                            <span class="slds-assistive-text">Show More</span>
+                        </button>
+                        <!-- ngIf: dropdownOpen -->
+                     </div>
+                    </div>
+                    <div class="filter-link-container" ng-init="initModalData();">
+                        
+                        <!-- ngIf: listview.listId != '' -->
+                        <a class="slds-text-link_reset mobile-filtering-letter" ng-click="openModal(true);" style="white-space: nowrap;">New List View</a>
+                        <!-- ngIf: listview.listId != '' -->
+                    </div>
+                </div>
+                
+
+            </div>
+        </div>
+        <edit-dialog actions="modal.advancedFilteringActions" dialog-title="" visible="modal.openFormModal" class="ng-isolate-scope"><!-- ngIf: vm.visible && vm.isModal -->
+<div ng-show="vm.visible" ng-class="vm.classes" class="ng-hide slds-modal slds-fade-in-open">
+    <div ng-class="{'slds-modal__container': vm.isModal}" class="slds-modal__container">
+        <div ng-class="{ 'slds-modal__header': vm.dialogTitle || vm.dialogSubtitle }" class="ng-binding">
+            <h2 class="slds-text-heading--medium slds-text-align--center ng-binding"></h2>
+            <button class="slds-button slds-modal__close slds-button svg-button ng-isolate-scope slds-button--icon-inverse" ng-class="vm.buttonClass()" icon="close" svg="utility" button-classes="slds-button--icon-inverse" assistive-text="Close" ng-click="vm.close()">
+	<!-- ngIf: vm.assistiveText --><span class="slds-assistive-text ng-binding ng-scope" ng-if="vm.assistiveText">Close</span><!-- end ngIf: vm.assistiveText -->
+	<!-- ngIf: vm.icon && !vm.link && !vm.showLoader --><svg xmlns="http://www.w3.org/2000/svg" class="slds-button__icon" style="height: ;" ng-if="vm.icon &amp;&amp; !vm.link &amp;&amp; !vm.showLoader" svg="utility" icon="close" color="" size="" ng-class="vm.iconClasses">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#close" style="color: ; fill: ;"/>
+</svg><!-- end ngIf: vm.icon && !vm.link && !vm.showLoader -->
+	<!-- ngIf: vm.dynamicText && !vm.link && !vm.showLoader -->
+
+	<!-- ngIf: vm.link -->
+
+	<!-- ngIf: vm.showLoader -->
+</button>
+            
+        </div>
+        
+        <div class="slds-scope panel-content slds-scrollable--y slds-modal__content" ng-class="{'slds-modal__content': vm.isModal}">
+            <!-- ngIf: vm.message -->
+            <!-- edit form with selected fields -->
+            <!-- ngIf: vm.model && (vm.fields.length || vm.fieldNames.length) -->
+            <div ng-transclude="">
+            <div class="slds-modal__content ng-scope" id="modal-content-id-1">
+                <div class="slds-form-element__control modal-body">
+                    
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="requestName">Name<span class="slds-required"> *</span></label>
+                        <input class="slds-input ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" id="fName" maxlength="80" ng-model="modal.listViewName" type="text" />
+                    </div>
+
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="requestName">Status</label>
+                        <div class="slds-form-element__control ">
+                            <div class="slds-grid">
+                                <div class="slds-col slds-size--6-of-6 slds-medium-size--1-of-3">
+                                    <div class="slds-select_container">
+                                        <select class="slds-select ng-pristine ng-untouched ng-valid ng-not-empty" id="Forms" name="selectedStatus" ng-model="listview.status">
+                                            <option selected="selected" value="All">All</option>
+                                            <option selected="selected" value="Open">Open</option>
+                                            <option selected="selected" value="Overdue">Overdue</option>
+                                            <option selected="selected" value="Closed/Completed">Closed/Completed</option>
+                                        </select>
+                                    </div>  
+                                </div>
+                                <div class="slds-col slds-medium-size--3-of-6"></div>
+                            </div>
+                        </div>
+                    </div>  
+
+                    
+                    <div>
+                        <label class="slds-form-element__label" for="requestName">Users</label>
+                        <slds-lookup display-field="name" item-icon="getIcon" key-field="id" model="users" multiple="true" on-change="selectUser" placeholder="'Select a User'" search-action="searchUsers" variable="user" class="ng-isolate-scope"><div class="slds-lookup" data-select="multi" data-scope="single">
+	<!-- Single select/search -->
+	<!-- ngIf: !vm.multiple -->
+
+
+	<!-- Multiple select/search -->
+	<!-- ngIf: vm.multiple --><div class="slds-form-element slds-picklist ng-scope" ng-if="vm.multiple">
+
+		<!--Input field with a dynamic icon (search/arrow)-->
+		<!-- ngIf: !vm.readOnly --><div ng-if="!vm.readOnly" class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right ng-scope">
+			<input type="text" class="slds-input ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" id="" ng-model="vm.searchTerm" ng-model-options="vm.modelOptions" role="combobox" placeholder="Select a User" maxlength="80" ng-change="vm.search();" ng-focus="vm.search();" />
+
+			<!-- ngIf: !vm.loading --><svg xmlns="http://www.w3.org/2000/svg" class="slds-input__icon slds-input__icon_right slds-button__icon" style="height: ;" ng-if="!vm.loading" icon="search" svg="utility" ng-click="vm.search()">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#search" style="color: ; fill: ;"/>
+</svg><!-- end ngIf: !vm.loading -->
+			<!-- ngIf: vm.loading -->
+		</div><!-- end ngIf: !vm.readOnly -->
+
+		<!-- ngIf: !vm.readOnly && vm.bulkSelection -->
+
+		<!-- List of answer options/items for multi picklist -->
+		<!-- ngIf: vm.isMultiPicklist && vm.searchResultsVisible && vm.searchResults.length -->
+
+		<!-- List of answer options/items for multi-search lookup -->
+		<!-- ngIf: !vm.isMultiPicklist && vm.searchResultsVisible && vm.searchResults.length -->
+
+		<!-- Editable pills container of Multi-searched items -->
+		<!-- ngIf: !vm.readOnly && vm.selectedItems.length -->
+
+		<!-- Read-only list of selected items-->
+		<!-- ngIf: vm.readOnly && vm.selectedItems.length -->
+	</div><!-- end ngIf: vm.multiple -->
+
+	<!--The input field to control non formly-form context while submitting a form-->
+	<!-- ngIf: vm.required -->
+</div></slds-lookup>
+                    </div>
+
+                    
+                    <div class="modal-body-section">
+                        <label class="slds-form-element__label" for="requestName">Trading Partners</label>
+                        <slds-lookup display-field="name" item-icon="getIcon" key-field="id" model="tradingPartners" multiple="true" on-change="selectTradingPartner" placeholder="'Select a Trading Partner'" search-action="searchTradingPartner" variable="tradingPartner" class="ng-isolate-scope"><div class="slds-lookup" data-select="multi" data-scope="single">
+	<!-- Single select/search -->
+	<!-- ngIf: !vm.multiple -->
+
+
+	<!-- Multiple select/search -->
+	<!-- ngIf: vm.multiple --><div class="slds-form-element slds-picklist ng-scope" ng-if="vm.multiple">
+
+		<!--Input field with a dynamic icon (search/arrow)-->
+		<!-- ngIf: !vm.readOnly --><div ng-if="!vm.readOnly" class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right ng-scope">
+			<input type="text" class="slds-input ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" id="" ng-model="vm.searchTerm" ng-model-options="vm.modelOptions" role="combobox" placeholder="Select a Trading Partner" maxlength="80" ng-change="vm.search();" ng-focus="vm.search();" />
+
+			<!-- ngIf: !vm.loading --><svg xmlns="http://www.w3.org/2000/svg" class="slds-input__icon slds-input__icon_right slds-button__icon" style="height: ;" ng-if="!vm.loading" icon="search" svg="utility" ng-click="vm.search()">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#search" style="color: ; fill: ;"/>
+</svg><!-- end ngIf: !vm.loading -->
+			<!-- ngIf: vm.loading -->
+		</div><!-- end ngIf: !vm.readOnly -->
+
+		<!-- ngIf: !vm.readOnly && vm.bulkSelection -->
+
+		<!-- List of answer options/items for multi picklist -->
+		<!-- ngIf: vm.isMultiPicklist && vm.searchResultsVisible && vm.searchResults.length -->
+
+		<!-- List of answer options/items for multi-search lookup -->
+		<!-- ngIf: !vm.isMultiPicklist && vm.searchResultsVisible && vm.searchResults.length -->
+
+		<!-- Editable pills container of Multi-searched items -->
+		<!-- ngIf: !vm.readOnly && vm.selectedItems.length -->
+
+		<!-- Read-only list of selected items-->
+		<!-- ngIf: vm.readOnly && vm.selectedItems.length -->
+	</div><!-- end ngIf: vm.multiple -->
+
+	<!--The input field to control non formly-form context while submitting a form-->
+	<!-- ngIf: vm.required -->
+</div></slds-lookup>
+                    </div>
+                    
+                    
+                    <div class="modal-body-section">
+                        <label class="slds-form-element__label" for="requestName">Products</label>
+                        <slds-lookup display-field="name" item-icon="getIcon" key-field="id" model="modal.products" multiple="true" on-change="selectProduct" placeholder="'Select a Product'" search-action="searchProducts" variable="product" class="ng-isolate-scope"><div class="slds-lookup" data-select="multi" data-scope="single">
+	<!-- Single select/search -->
+	<!-- ngIf: !vm.multiple -->
+
+
+	<!-- Multiple select/search -->
+	<!-- ngIf: vm.multiple --><div class="slds-form-element slds-picklist ng-scope" ng-if="vm.multiple">
+
+		<!--Input field with a dynamic icon (search/arrow)-->
+		<!-- ngIf: !vm.readOnly --><div ng-if="!vm.readOnly" class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right ng-scope">
+			<input type="text" class="slds-input ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" id="" ng-model="vm.searchTerm" ng-model-options="vm.modelOptions" role="combobox" placeholder="Select a Product" maxlength="80" ng-change="vm.search();" ng-focus="vm.search();" />
+
+			<!-- ngIf: !vm.loading --><svg xmlns="http://www.w3.org/2000/svg" class="slds-input__icon slds-input__icon_right slds-button__icon" style="height: ;" ng-if="!vm.loading" icon="search" svg="utility" ng-click="vm.search()">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#search" style="color: ; fill: ;"/>
+</svg><!-- end ngIf: !vm.loading -->
+			<!-- ngIf: vm.loading -->
+		</div><!-- end ngIf: !vm.readOnly -->
+
+		<!-- ngIf: !vm.readOnly && vm.bulkSelection -->
+
+		<!-- List of answer options/items for multi picklist -->
+		<!-- ngIf: vm.isMultiPicklist && vm.searchResultsVisible && vm.searchResults.length -->
+
+		<!-- List of answer options/items for multi-search lookup -->
+		<!-- ngIf: !vm.isMultiPicklist && vm.searchResultsVisible && vm.searchResults.length -->
+
+		<!-- Editable pills container of Multi-searched items -->
+		<!-- ngIf: !vm.readOnly && vm.selectedItems.length -->
+
+		<!-- Read-only list of selected items-->
+		<!-- ngIf: vm.readOnly && vm.selectedItems.length -->
+	</div><!-- end ngIf: vm.multiple -->
+
+	<!--The input field to control non formly-form context while submitting a form-->
+	<!-- ngIf: vm.required -->
+</div></slds-lookup>     
+                    </div>
+
+                    
+                    <div class="modal-body-section">
+                        <label class="slds-form-element__label" for="requestName">Forms</label>
+                        <slds-lookup display-field="name" item-icon="getIcon" key-field="id" model="modal.forms" multiple="true" on-change="selectForm" placeholder="'Select a Form'" search-action="searchForms" variable="form" class="ng-isolate-scope"><div class="slds-lookup" data-select="multi" data-scope="single">
+	<!-- Single select/search -->
+	<!-- ngIf: !vm.multiple -->
+
+
+	<!-- Multiple select/search -->
+	<!-- ngIf: vm.multiple --><div class="slds-form-element slds-picklist ng-scope" ng-if="vm.multiple">
+
+		<!--Input field with a dynamic icon (search/arrow)-->
+		<!-- ngIf: !vm.readOnly --><div ng-if="!vm.readOnly" class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right ng-scope">
+			<input type="text" class="slds-input ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" id="" ng-model="vm.searchTerm" ng-model-options="vm.modelOptions" role="combobox" placeholder="Select a Form" maxlength="80" ng-change="vm.search();" ng-focus="vm.search();" />
+
+			<!-- ngIf: !vm.loading --><svg xmlns="http://www.w3.org/2000/svg" class="slds-input__icon slds-input__icon_right slds-button__icon" style="height: ;" ng-if="!vm.loading" icon="search" svg="utility" ng-click="vm.search()">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#search" style="color: ; fill: ;"/>
+</svg><!-- end ngIf: !vm.loading -->
+			<!-- ngIf: vm.loading -->
+		</div><!-- end ngIf: !vm.readOnly -->
+
+		<!-- ngIf: !vm.readOnly && vm.bulkSelection -->
+
+		<!-- List of answer options/items for multi picklist -->
+		<!-- ngIf: vm.isMultiPicklist && vm.searchResultsVisible && vm.searchResults.length -->
+
+		<!-- List of answer options/items for multi-search lookup -->
+		<!-- ngIf: !vm.isMultiPicklist && vm.searchResultsVisible && vm.searchResults.length -->
+
+		<!-- Editable pills container of Multi-searched items -->
+		<!-- ngIf: !vm.readOnly && vm.selectedItems.length -->
+
+		<!-- Read-only list of selected items-->
+		<!-- ngIf: vm.readOnly && vm.selectedItems.length -->
+	</div><!-- end ngIf: vm.multiple -->
+
+	<!--The input field to control non formly-form context while submitting a form-->
+	<!-- ngIf: vm.required -->
+</div></slds-lookup>
+                    </div>    
+
+                    
+                    <div class="modal-body-section">
+                        <label class="slds-form-element__label" for="requestName">Product Relationship Tags</label>
+                        <slds-lookup display-field="name" item-icon="getIcon" key-field="id" model="modal.upRelationshipTag" multiple="true" on-change="selectUPRelationshipTag" placeholder="'Enter a Tag'" search-action="searchUPRelationshipTag" variable="upRelationshipTag" class="ng-isolate-scope"><div class="slds-lookup" data-select="multi" data-scope="single">
+	<!-- Single select/search -->
+	<!-- ngIf: !vm.multiple -->
+
+
+	<!-- Multiple select/search -->
+	<!-- ngIf: vm.multiple --><div class="slds-form-element slds-picklist ng-scope" ng-if="vm.multiple">
+
+		<!--Input field with a dynamic icon (search/arrow)-->
+		<!-- ngIf: !vm.readOnly --><div ng-if="!vm.readOnly" class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right ng-scope">
+			<input type="text" class="slds-input ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" id="" ng-model="vm.searchTerm" ng-model-options="vm.modelOptions" role="combobox" placeholder="Enter a Tag" maxlength="80" ng-change="vm.search();" ng-focus="vm.search();" />
+
+			<!-- ngIf: !vm.loading --><svg xmlns="http://www.w3.org/2000/svg" class="slds-input__icon slds-input__icon_right slds-button__icon" style="height: ;" ng-if="!vm.loading" icon="search" svg="utility" ng-click="vm.search()">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#search" style="color: ; fill: ;"/>
+</svg><!-- end ngIf: !vm.loading -->
+			<!-- ngIf: vm.loading -->
+		</div><!-- end ngIf: !vm.readOnly -->
+
+		<!-- ngIf: !vm.readOnly && vm.bulkSelection -->
+
+		<!-- List of answer options/items for multi picklist -->
+		<!-- ngIf: vm.isMultiPicklist && vm.searchResultsVisible && vm.searchResults.length -->
+
+		<!-- List of answer options/items for multi-search lookup -->
+		<!-- ngIf: !vm.isMultiPicklist && vm.searchResultsVisible && vm.searchResults.length -->
+
+		<!-- Editable pills container of Multi-searched items -->
+		<!-- ngIf: !vm.readOnly && vm.selectedItems.length -->
+
+		<!-- Read-only list of selected items-->
+		<!-- ngIf: vm.readOnly && vm.selectedItems.length -->
+	</div><!-- end ngIf: vm.multiple -->
+
+	<!--The input field to control non formly-form context while submitting a form-->
+	<!-- ngIf: vm.required -->
+</div></slds-lookup>
+                    </div>
+
+                    
+                    <div class="modal-body-section">
+                        <label class="slds-form-element__label" for="requestName">Product Relationship Attributes/Values</label>
+                        <input class="slds-input ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" id="attribute-input" maxlength="80" ng-model="modal.attribute" placeholder="Enter an Attribute (optional)" type="text" variable="attribute" />
+                        <slds-lookup display-field="name" item-icon="getIcon" key-field="id" min-length="2" model="modal.upRelationshipAttributes" multiple="true" on-change="selectUPRelationshipAttribute" placeholder="'Enter an Attribute Value (required for Attribute/Value search)'" remote-action-args="[modal.attribute]" search-action="searchUPRelationshipAttribute" variable="upRelationshipAttribute" class="ng-isolate-scope"><div class="slds-lookup" data-select="multi" data-scope="single">
+	<!-- Single select/search -->
+	<!-- ngIf: !vm.multiple -->
+
+
+	<!-- Multiple select/search -->
+	<!-- ngIf: vm.multiple --><div class="slds-form-element slds-picklist ng-scope" ng-if="vm.multiple">
+
+		<!--Input field with a dynamic icon (search/arrow)-->
+		<!-- ngIf: !vm.readOnly --><div ng-if="!vm.readOnly" class="slds-form-element__control slds-input-has-icon slds-input-has-icon--right ng-scope">
+			<input type="text" class="slds-input ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" id="" ng-model="vm.searchTerm" ng-model-options="vm.modelOptions" role="combobox" placeholder="Enter an Attribute Value (required for Attribute/Value search)" maxlength="80" ng-change="vm.search();" ng-focus="vm.search();" />
+
+			<!-- ngIf: !vm.loading --><svg xmlns="http://www.w3.org/2000/svg" class="slds-input__icon slds-input__icon_right slds-button__icon" style="height: ;" ng-if="!vm.loading" icon="search" svg="utility" ng-click="vm.search()">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#search" style="color: ; fill: ;"/>
+</svg><!-- end ngIf: !vm.loading -->
+			<!-- ngIf: vm.loading -->
+		</div><!-- end ngIf: !vm.readOnly -->
+
+		<!-- ngIf: !vm.readOnly && vm.bulkSelection -->
+
+		<!-- List of answer options/items for multi picklist -->
+		<!-- ngIf: vm.isMultiPicklist && vm.searchResultsVisible && vm.searchResults.length -->
+
+		<!-- List of answer options/items for multi-search lookup -->
+		<!-- ngIf: !vm.isMultiPicklist && vm.searchResultsVisible && vm.searchResults.length -->
+
+		<!-- Editable pills container of Multi-searched items -->
+		<!-- ngIf: !vm.readOnly && vm.selectedItems.length -->
+
+		<!-- Read-only list of selected items-->
+		<!-- ngIf: vm.readOnly && vm.selectedItems.length -->
+	</div><!-- end ngIf: vm.multiple -->
+
+	<!--The input field to control non formly-form context while submitting a form-->
+	<!-- ngIf: vm.required -->
+</div></slds-lookup>
+					</div>
+
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="requestName">Default</label>
+                        <label class="slds-checkbox">
+                            <input id="check" ng-model="listview.default" type="checkbox" class="ng-pristine ng-untouched ng-valid ng-empty" />
+                            <span class="slds-checkbox--faux"></span>
+                       </label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- ngIf: vm.cancelButton || vm.actions.length || vm.footerText -->
+    </div>
+
+</div>
+</edit-dialog>
+    </header><!-- end ngIf: !slideTrue -->
+
+    <!-- ngIf: slideTrue -->
+
+    <div class="task-section ng-hide" ng-show="!stencils">
+        <div class="task-left">
+            <div class="taskin">
+                <!-- ngIf: !tasks.length --><div class="notask ng-scope" ng-if="!tasks.length">
+                    <p class="ng-binding"></p>
+                </div><!-- end ngIf: !tasks.length -->
+                <!-- ngIf: tasks.length > 0 -->
+            </div>
+        </div>
+
+        <div class="task-right fadediv" ng-class="{slideleft: slideTrue, fadediv:fadeTrue}">
+            <!-- ngIf: rightPanelShow -->
+        </div>
+    </div>
+
+    
+    <edit-dialog cancel-button="Cancel" dialog-title="Related Requests" size="large" visible="modal.relatedRequestModal" class="ng-isolate-scope"><!-- ngIf: vm.visible && vm.isModal -->
+<div ng-show="vm.visible" ng-class="vm.classes" class="ng-hide slds-modal slds-fade-in-open slds-modal--large">
+    <div ng-class="{'slds-modal__container': vm.isModal}" class="slds-modal__container">
+        <div ng-class="{ 'slds-modal__header': vm.dialogTitle || vm.dialogSubtitle }" class="ng-binding slds-modal__header">
+            <h2 class="slds-text-heading--medium slds-text-align--center ng-binding">Related Requests</h2>
+            <button class="slds-button slds-modal__close slds-button svg-button ng-isolate-scope slds-button--icon-inverse" ng-class="vm.buttonClass()" icon="close" svg="utility" button-classes="slds-button--icon-inverse" assistive-text="Close" ng-click="vm.close()">
+	<!-- ngIf: vm.assistiveText --><span class="slds-assistive-text ng-binding ng-scope" ng-if="vm.assistiveText">Close</span><!-- end ngIf: vm.assistiveText -->
+	<!-- ngIf: vm.icon && !vm.link && !vm.showLoader --><svg xmlns="http://www.w3.org/2000/svg" class="slds-button__icon" style="height: ;" ng-if="vm.icon &amp;&amp; !vm.link &amp;&amp; !vm.showLoader" svg="utility" icon="close" color="" size="" ng-class="vm.iconClasses">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#close" style="color: ; fill: ;"/>
+</svg><!-- end ngIf: vm.icon && !vm.link && !vm.showLoader -->
+	<!-- ngIf: vm.dynamicText && !vm.link && !vm.showLoader -->
+
+	<!-- ngIf: vm.link -->
+
+	<!-- ngIf: vm.showLoader -->
+</button>
+            
+        </div>
+        
+        <div class="slds-scope panel-content slds-scrollable--y slds-modal__content" ng-class="{'slds-modal__content': vm.isModal}">
+            <!-- ngIf: vm.message -->
+            <!-- edit form with selected fields -->
+            <!-- ngIf: vm.model && (vm.fields.length || vm.fieldNames.length) -->
+            <div ng-transclude="">
+         <div class="slds-p-horizontal_large slds-theme_shade slds-form-element ng-scope">
+             <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                <svg xmlns="http://www.w3.org/2000/svg" class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default slds-button__icon" style="height: ;" icon="search" svg="utility">
+	<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/apexpages/slds/latest/assets/icons/utility-sprite/svg/symbols.svg#search" style="color: ; fill: ;"/>
+</svg>
+                <input class="slds-input ng-pristine ng-untouched ng-valid ng-empty ng-valid-maxlength" id="filterChildRequest" maxlength="80" ng-keyup="filterChildRequest()" ng-model="filterText.name" placeholder="Search by product name" type="text" />
+            </div>
+        </div>
+        <!-- ngIf: filterText.filteredList.length -->
+        <!-- ngIf: !filterText.filteredList.length --><div class="childRequest ng-scope" ng-if="!filterText.filteredList.length">
+            <div class="slds-text-heading_medium slds-text-align_center slds-text-font_monospace">No matches found.</div>
+        </div><!-- end ngIf: !filterText.filteredList.length -->
+    </div>
+        </div>
+
+        <!-- ngIf: vm.cancelButton || vm.actions.length || vm.footerText --><div class="slds-modal__footer ng-scope" ng-if="vm.cancelButton || vm.actions.length || vm.footerText">
+            <!-- ngIf: vm.footerText -->
+            <!-- ngIf: vm.cancelButton --><button class="slds-button slds-button--neutral slds-button svg-button ng-scope ng-isolate-scope" ng-class="vm.buttonClass()" ng-if="vm.cancelButton" dynamic-text="vm.cancelButton" ng-click="vm.close()">
+	<!-- ngIf: vm.assistiveText -->
+	<!-- ngIf: vm.icon && !vm.link && !vm.showLoader -->
+	<!-- ngIf: vm.dynamicText && !vm.link && !vm.showLoader --><span ng-if="vm.dynamicText &amp;&amp; !vm.link &amp;&amp; !vm.showLoader" class="ng-binding ng-scope">Cancel</span><!-- end ngIf: vm.dynamicText && !vm.link && !vm.showLoader -->
+
+	<!-- ngIf: vm.link -->
+
+	<!-- ngIf: vm.showLoader -->
+</button><!-- end ngIf: vm.cancelButton -->
+
+            <!-- ngRepeat: a in vm.actions -->
+
+            <!-- ngIf: vm.confirmButton -->
+
+        </div><!-- end ngIf: vm.cancelButton || vm.actions.length || vm.footerText -->
+    </div>
+
+</div>
+</edit-dialog>
+
+
+<script>
+    //Angular driven programming starts here
+    //**************************************
+    var myApp = angular.module('app', ['common']);
+    myApp.controller('TaskListCtrl', 
+            [ '$scope', 'RemoteActionService', 'NavigationService', '$timeout', 
+    function(  $scope,   RemoteActionService,   NavigationService,   $timeout) 
+    {
+        window.TaskListCtrl = $scope;
+        $scope.modal = { 
+            openFormModal: false, 
+            reset: true,
+            listViewName: '',
+            products: []
+        };
+        $scope.stencils = true;
+        $scope.isReset = false;
+        $scope.isSave = false;
+        $scope.tasks = [];
+        $scope.taskDetail = [];
+        $scope.products = [];
+        $scope.forms = [];
+        $scope.upRelationshipAttributes = [];
+        $scope.upRelationshipTags = [];
+        $scope.productsWrapper = [];
+        $scope.users = [];
+        $scope.usersWrapper = [];  
+        $scope.tradingPartners = [];
+        $scope.tradingPartnersWrapper = [];
+        $scope.selectedModel = {
+            forms: [],
+            selectedForm: {}
+        };
+        $scope.selectedFormWrapper = {id: "", name: "Please Select"};
+        $scope.listViews = [];
+        $scope.countOfFilters = 0;
+        $scope.dropdownOpen = false;
+        $scope.rightPanelShow = false;
+        $scope.slideTrue = false;
+        $scope.message = '';
+        $scope.loading = false;
+        $scope.buttons = false;
+        $scope.openForm = false;
+        $scope.approveBtn = false;
+        $scope.rejectBtn = false;
+        $scope.inDropdown = false;
+        $scope.markCompleted = false;
+        $scope.dropdownB = false;
+        $scope.dropOpenDown = false;
+        $scope.taskSelected = 'Open';
+        $scope.isMarkedCompleted = false;
+        $scope.fadeTrue = true;
+        $scope.isNewListView = false;
+        $scope.listViewName = '';
+        $scope.listview = {
+            name : "", 
+            status : "All",
+            selected : "",
+            listId : "",
+            users : [],
+            products : [],
+            tradingPartners : [],
+            title: '',
+            default: false
+        };
+        
+        $scope.filterText={
+            name:"",
+            filteredList:[],
+        };
+
+
+        $scope.standardViews = [{label : 'All', val : 'all'}, {label : 'Open', val : 'open'}, {label : 'Overdue', val : 'overdue'}, {label : 'Closed/Completed', val : 'completed'}];
+        $scope.selListView = NavigationService.getParameter('vid', window.location);
+        var pos = $scope.standardViews.findBy($scope.selListView, 'val');
+        if(pos != -1){
+            $scope.listview.filterName = $scope.listview.taskStatus = $scope.standardViews[pos].label;
+        }else if($scope.selListView &amp;&amp; $scope.selListView.containsNumber()){
+            $scope.listview.selected = $scope.selListView;
+        }else{
+            $scope.listview.filterName = $scope.listview.taskStatus = 'Open';
+        }
+
+        //AP-21
+        $scope.taskDetailIndex = 0;
+        $scope.pageUrl = NavigationService.pageUrl;
+        $scope.objectUrl = NavigationService.objectUrl;
+
+        $scope.reOpenButtonVisibility = function(taskDetail)
+        {
+
+            if(taskDetail.requestStatus === 'Closed' &amp;&amp; taskDetail.WorkflowGlobalDefinitionId === 'WD3ACTOR' &amp;&amp; taskDetail.isRequestor &amp;&amp; !taskDetail.isNotificationOnly)
+            {
+                if(taskDetail.formResult === 'Pass')
+                {
+                    taskDetail.reOpenButton = true;
+                }
+                else
+                {
+                    RemoteActionService.callRemoteAction("retrieveCARRequests", [taskDetail.requestId], function(result) 
+                    {
+                        if(result.requestStatus === '')
+                        {
+                            //If the workflow status is Fail and CAR does not exist then Reopen button should be displayed
+                            taskDetail.reOpenButton = (result.workflowStatus === 'Fail');
+                        }
+                        else
+                        {
+                            //if status is Failed Results Accepted and CAR is closed then Reopen button should be displayed
+                            taskDetail.reOpenButton = (result.workflowStatus === 'Failed Results Accepted' &amp;&amp; result.requestStatus === 'Closed');
+                        }
+                    });
+                }
+            }
+            else
+            {
+                taskDetail.reOpenButton = false;
+            }
+
+            console.log("reOpenButtonVisibility",taskDetail.reOpenButton,taskDetail);
+            return taskDetail.reOpenButton;
+
+        };
+
+        //AP-257
+        $scope.init = function(){
+            $scope.getListViews(true);
+        };
+
+        $scope.btnDropDown = function(){
+            $scope.dropOpenDown = !$scope.dropOpenDown;
+        };
+
+        $scope.dropdown = function(){
+            $scope.dropdownOpen = !$scope.dropdownOpen;
+        };
+
+        angular.element(document).on('click', function () {
+            if($scope.dropdownOpen==true)
+                angular.element( document.querySelector( '#taskDropdown' ) ).triggerHandler('click');
+        });
+
+        $scope.reopenTask = function(taskDetail)
+        {
+            RemoteActionService.callRemoteAction("reopenTask", [taskDetail.requestId, taskDetail.taskId, taskDetail.containerInstanceId], function(result)
+            {
+                window.location.reload();
+            });
+        }
+
+        $scope.fetchTasks = function(param)
+        {
+            $scope.loading = true;
+            $scope.tasks = [];
+            var productsIds = [];
+            var usersids = [];
+            var tparnersIds = [];
+            var formIds = [];
+            var upRelationshipAttributes = [];
+            var upRelationshipTags = [];
+            $scope.tasks = [];
+            $scope.listview.selected = '';
+            var selectedFormId = '';
+
+            var status = null;
+            var listviewId = null;
+            if(param){
+                status = param == 'Open' ? param : param.taskStatus;
+            }else{
+                status = param = 'Open';
+            }
+            listviewId = param.confId ? param.confId : null;
+            $scope.listview.listId = listviewId;
+
+            if(param.confId){
+                $scope.selListView = param.confId;
+                $scope.listview =  param;
+                $scope.modal.products = param.productWrapperList;
+                $scope.modal.forms = param.formWrapperList;
+                $scope.modal.upRelationshipAttributes = param.UPRelationshipAttributeWrapperList;
+                $scope.modal.upRelationshipTags = param.UPRelationshipTagWrapperList;
+                $scope.users = param.userWrapperList; 
+                $scope.tradingPartners = param.tradingPartnerWrapperList;
+                $scope.selectedModel.selectedForm.id = param.formId;
+                selectedFormId = ($scope.selectedModel.selectedForm == null)?null:$scope.selectedModel.selectedForm.id;
+
+                if(param.productWrapperList){
+                    for(var i = 0; i &lt; param.productWrapperList.length; i++){
+                        productsIds.push(param.productWrapperList[i].id);
+                    }
+                }
+                if(param.userWrapperList){
+                    for(var i = 0; i &lt; param.userWrapperList.length; i++){
+                       usersids.push(param.userWrapperList[i].id);
+                    }
+                }
+                if(param.tradingPartnerWrapperList){
+                    for(var i = 0; i &lt; param.tradingPartnerWrapperList.length; i++){
+                       tparnersIds.push(param.tradingPartnerWrapperList[i].id);
+                    }
+                }
+                if(param.formId) formIds.push(param.formId);
+                if(param.formWrapperList){
+                    for(var i = 0; i &lt; param.formWrapperList.length; i++){
+                       formIds.push(param.formWrapperList[i].id);
+                    }
+                }
+                if(param.upRelationshipAttributeWrapperList){
+                    for(var i = 0; i &lt; param.upRelationshipAttributeWrapperList.length; i++){
+                        upRelationshipAttributes.push(param.upRelationshipAttributeWrapperList[i].id);
+                    }
+                }
+                if(param.upRelationshipTagWrapperList){
+                    for(var i = 0; i &lt; param.upRelationshipTagWrapperList.length; i++){
+                        upRelationshipTags.push(param.upRelationshipTagWrapperList[i].id);
+                    }
+                }
+
+            }else{
+                
+                $scope.listview = param;
+                $scope.selListView = param;
+                var pos = $scope.standardViews.findBy(param.taskStatus, 'label');
+                if(pos != -1) $scope.selListView = $scope.standardViews[pos].val;
+                $scope.listview.selected = $scope.selListView;
+                $scope.listview.listId = '';
+
+            }
+
+            $scope.modal.advancedFilteringActions = [
+                    { text: "Close",  click: $scope.closeModal, close: true },
+                    { text: "Save", click: $scope.save, close: true, disable: function() { return String.isEmpty($scope.modal.listViewName); } }
+            ];
+
+            // Columns for Related Request Table 
+            $scope.relatedRequestColumns = [
+                { value: $scope.childTaskNameHtml, label: "Request", sortable: true, classes: $scope.getProductStatusClassStrike},
+                { field: "partnerName", label: "From",    sortable: true, classes: $scope.getProductStatusClassStrike },
+                { field: "productName", label: "Product", sortable: true, classes: $scope.getProductStatusClassStrike},
+                { field: "requestType", label: "Request type",   sortable: true, classes: $scope.getProductStatusClassStrike},
+                { field: "taskRequestStatus", label: "Workflow Status",    sortable: true, classes: $scope.getProductStatusClassStrike},
+                { field: "containerName", label: "Form name",    sortable: true, classes: $scope.getProductStatusClassStrike, click: $scope.openFormView},
+                { field: "dueDate", label: "Due Date",   sortable: true, classes: $scope.getProductStatusClassStrike},
+                { field: "requestComments", label: "Comments" },
+/*
+                { field: "requestComments", label: "Comment", type: "icon", icon: "comments", iconFile: "utility", iconSize: "20px", align: "center",
+                    classes: $scope.getProductStatusClassStrike,
+                    popover: row =&gt; row &amp;&amp; row.requestComments,
+                    color:   row =&gt; row &amp;&amp; String.isNotEmpty(row.requestComments) ? "red" : "#BBB"
+                },
+*/
+                { type: "button", text: "Open Form", buttonClasses: "slds-button--neutral small-button", align: "center", click: $scope.openFormView, showButton: $scope.showProductOpenFormButton}
+            ];
+
+            $scope.relatedRequestActions = [
+                // { text: "Open Form", click: $scope.openFormView, show: $scope.showProductOpenFormButton},
+                { text: "Reject", click: $scope.reject, show: $scope.showProductRejectButton},
+                { text: "Cancel", click: $scope.cancelRequestFromModal, show: $scope.showCancelButton},
+                { text: "Mark as Completed", click: $scope.markAsComplete, show: $scope.showMarkAsComplete},
+                { text: "Return to Verifier", click: $scope.returnToVerifier, show: $scope.showReturnToVerifierOrApprove},
+                { text: "Approve", click: $scope.approve, show: $scope.showReturnToVerifierOrApprove},
+                { text: "Re-Submit", click: $scope.reSubmit, show: $scope.showReSubmitButton},
+                { text: "Reopen", click: $scope.reopenTask, show: task =&gt; task.reOpenButton}
+            ];
+
+            $scope.rightPanelShow = false;
+
+            RemoteActionService.callRemoteAction("fetchTasksList", [status, listviewId, productsIds, usersids, tparnersIds, formIds, upRelationshipAttributes, upRelationshipTags], function(result)
+            {
+                $scope.tasks = result;
+                if(Array.isEmpty(result))
+                {
+                     $scope.message = 'Currently there are no tasks!';
+                     $scope.stencils = false;
+                     $scope.taskSelected = param == 'Open'? param : param.filterName;
+                     $scope.rightPanelShow = false;
+                     $scope.modal.openFormModal = false;
+                     $scope.loading = false;
+                     return;
+                };
+
+                // set ID
+                $scope.taskSelected = param == 'Open'? param : param.filterName;
+                $scope.taskDetail = $scope.tasks[0];
+                $scope.iFrameWidth = window.innerWidth;
+                $scope.rightPanelShow = true;
+                 
+                if($scope.iFrameWidth &gt; 1023)
+                    $scope.taskRow = 0;
+
+                if(!$scope.taskDetail.taskWfStatus)
+                    $scope.taskDetail.taskWfStatus = "";
+
+                if($scope.taskDetail.recordTypeName === 'Connection')
+                {
+                    if(!$scope.tasks.isRequestor)
+                    {
+                         $scope.buttons = true;
+                         $scope.openForm = false;
+                         $scope.approveBtn = true;
+                         $scope.rejectBtn = true;
+                         $scope.dropdownB = false;
+                         $scope.inDropdown = false;
+                    }
+                    else
+                    {
+                        $scope.buttons = false;
+                    }
+                }
+                else if($scope.taskDetail.recordTypeName === 'Document')
+                {
+                     $scope.buttons = false;
+                }
+                else if($scope.taskDetail.taskWfStatus === 'Cancelled')
+                {
+                     $scope.buttons = false;
+                }
+                else if($scope.taskDetail.taskWfStatus === 'Approved')
+                {
+                    $scope.buttons = false;
+                }
+                else if($scope.taskDetail.taskWfStatus.indexOf('Rejected') &gt; -1)
+                {                         
+                    if($scope.taskDetail.isRequestor)
+                    {
+                        $scope.buttons = true;
+                        $scope.openForm = true;
+                        $scope.approveBtn = true;
+                        $scope.rejectBtn = true;
+                        $scope.dropdownB = true;
+                        $scope.inDropdown = true;
+                    }
+                    else
+                    {
+                        $scope.buttons = true;
+                        $scope.openForm = true;
+                        $scope.approveBtn = false;
+                        $scope.rejectBtn = false;
+                        $scope.dropdownB = false;
+                        $scope.inDropdown = false;
+                    }
+                }
+                else
+                {
+                    if($scope.taskDetail.isRequestor)
+                    {
+                         $scope.buttons = true;
+                         $scope.openForm = true;
+                         $scope.approveBtn = true;
+                         $scope.rejectBtn = true;
+                         $scope.dropdownB = true;
+                         $scope.inDropdown = true;
+                    }else{
+                         $scope.buttons = true;
+                         $scope.openForm = true;
+                         $scope.approveBtn = false;
+                         $scope.rejectBtn = true;
+                         $scope.dropdownB = false;
+                         $scope.inDropdown = false;
+                    }
+                }
+                 
+                if($scope.isReset){
+                    $scope.isReset = false;
+                }
+                if($scope.isSave){
+                    $scope.isSave = false;
+                    $scope.modal.openFormModal = false;
+                }
+
+                $scope.fetchTaskDetail(0);
+                $scope.loading = false;
+                console.log("tasks", $scope.tasks);
+            });
+        }; //end $scope.fetchTasks
+
+        //AP-786 
+        $scope.childTaskNameHtml =  function(task)
+        {   
+            if(!task) return null;
+
+            var taskNameClass = task.isCompleted &amp;&amp; task.isTaskSeen ? "strike" : "";
+            var taskHtml = '&lt;span class="slds-text-title slds-truncate task-details ' + taskNameClass + '"&gt;' + task.taskName + '&lt;/span&gt;';
+            taskHtml    += '&lt;span class="slds-text-body--regular slds-truncate task-details" class="'+ taskNameClass + '"&gt;'; //outer span
+            taskHtml    += '&lt;b&gt;' + task.requestName + '&lt;/b&gt;';
+
+            //show form result
+            if(Array.in(task.formResult, [ "Pass", "Fail", "Kid Fail (Adult Pass)" ])) {
+                var formResultColor = task.formResult === "Pass"? "green"
+                                    : task.formResult === "Fail" || task.formResult === "Kid Fail (Adult Pass)" ? "red"
+                                    : task.isCompleted &amp;&amp; task.isTaskSeen ? "strike"
+                                    : "";
+                taskHtml += '&lt;span class="' + formResultColor + '"&gt; - ' + task.formResult + '&lt;/span&gt;';
+            }
+
+            //show workflow status
+            if( Array.in(task.taskWfStatus, ["Cancelled", "Approved", "Rejected"]) &amp;&amp; !Array.in(task.requestStatus, ["Reopen", "Closed"]) ) {
+                var statusColor = task.taskWfStatus === "Cancelled"   ? "red"
+                                  : task.taskWfStatus === "Approved"    ? "green"
+                                  : task.taskWfStatus === "Rejected"    ? "red"
+                                  : task.isCompleted &amp;&amp; task.isTaskSeen ? "strike"
+                                  : "";
+                taskHtml += '&lt;span class="' + statusColor + '" &gt; - ' + task.taskWfStatus + '&lt;/span&gt;';
+            }
+            taskHtml += '&lt;/span&gt;'; //close outer span with requestName
+
+            //show new label
+            if(task.isNew &amp;&amp; !Array.in(task.formResult, ["Fail", "Pass", "Kid Fail (Adult Pass)"]))
+                taskHtml += '&lt;div class="clearfix"&gt;&lt;/div&gt;' + '&lt;span class="slds-badge success"&gt;New&lt;/span&gt;';
+
+            return taskHtml;
+        };
+
+        $scope.fetchTaskDetail = function(param)
+        {
+            $scope.fadeTrue = true;
+            $scope.taskDetailIndex = param;
+
+            $timeout(function() 
+            {
+                $scope.dropOpenDown = false;
+                $scope.taskDetail = $scope.tasks[param];
+                console.log("taskDetail", param);
+                
+                if(!$scope.taskDetail)
+                    return;
+
+                if($scope.taskDetail.taskId &amp;&amp; Array.isNotEmpty($scope.taskDetail.childTasks))
+                {
+                    var addTask = !$scope.taskDetail.childTasks.some(t =&gt; t.taskId == $scope.taskDetail.taskId);
+                    if(addTask) {
+                        var parentCopy = angular.copy($scope.taskDetail);
+                        $scope.taskDetail.childTasks.splice(0, 0, parentCopy);
+                    }
+                }
+
+                if(!$scope.taskDetail.taskWfStatus){
+                    $scope.taskDetail.taskWfStatus = "";
+                }
+                if($scope.taskDetail.taskWfStatus.indexOf('Rejected') == 0){
+                    $scope.taskDetail.taskWfStatus = 'Rejected';
+                }
+                if($scope.taskDetail.recordTypeName === 'Connection'){
+                    if(!$scope.taskDetail.isRequestor){
+                        $scope.buttons = true;
+                        $scope.openForm = false;
+                        $scope.approveBtn = true;
+                        $scope.rejectBtn = true;
+                        $scope.dropdownB = false;
+                        $scope.inDropdown = false;
+                    }
+                    else
+                    {
+                        $scope.buttons = false;
+                    }
+                }  
+                else{
+                    if($scope.taskDetail.recordTypeName === 'Document'){
+                    //DE8325
+                    //AP-21
+                        $scope.buttons = false;
+                        $scope.openForm = false;
+                        $scope.rejectBtn = false;
+                    }
+                    else{
+                        if($scope.taskDetail.taskWfStatus === 'Cancelled'){
+                            $scope.buttons = false;
+                        }
+                        else if($scope.taskDetail.taskWfStatus === 'Approved'){
+                            $scope.buttons = false;
+                        }
+                        else if($scope.taskDetail.taskWfStatus.indexOf('Rejected') &gt; -1){
+                            if($scope.taskDetail.isRequestor){
+                                $scope.buttons = true;
+                                $scope.openForm = true;
+                                $scope.approveBtn = true;
+                                $scope.rejectBtn = true;
+                                $scope.dropdownB = true;
+                                $scope.inDropdown = true;
+                            }else{
+                                $scope.buttons = true;
+                                $scope.openForm = true;
+                                $scope.approveBtn = false;
+                                $scope.rejectBtn = true;
+                                $scope.dropdownB = false;
+                                $scope.inDropdown = false;
+                                $scope.markCompleted = true;
+                            }
+
+                        }
+                        else if($scope.taskDetail.isNotificationOnly ){
+                            $scope.buttons = false;
+                        }
+                        else if($scope.taskDetail.taskStatus == 'Closed'){
+                            $scope.buttons = false;
+                        }
+                        else{
+                            if($scope.taskDetail.isRequestor){
+                                $scope.buttons = true;
+                                $scope.openForm = true;
+                                $scope.approveBtn = true;
+                                $scope.rejectBtn = true;
+                                $scope.dropdownB = true;
+                                $scope.inDropdown = true;
+                            }
+                            else{
+                                $scope.buttons = true;
+                                $scope.openForm = true;
+                                $scope.approveBtn = false;
+                                $scope.rejectBtn = true;
+                                $scope.dropdownB = false;
+                                $scope.inDropdown = false;
+                            }
+                        }
+                    }
+                }
+                
+                $scope.iFrameWidth = window.innerWidth;
+                if($scope.iFrameWidth &lt; 1024)            
+                    $scope.slideTrue = true;
+                else
+                    $scope.taskRow = param;
+
+                $scope.stencils = false;
+                console.log("taskDetail", $scope.taskDetail);
+                $scope.reOpenButtonVisibility($scope.taskDetail);
+
+            }, 350);
+            $timeout(function(){$scope.fadeTrue = false;}, 700);
+        };
+
+        /* Filters Actions */
+        //AP-257
+        $scope.getListViews = function(param, isDelete){
+            RemoteActionService.callRemoteAction("getListViews", null, function(result) {
+                $scope.listViews = result;
+                if(param &amp;&amp; String.isBlank($scope.listview.selected)){
+                    for(var i = 0; i &lt; $scope.listViews.length; i++){
+                        if($scope.listViews[i].defaultListView){
+                            $scope.listview.selected = $scope.listViews[i].confId;
+                        }
+                    }
+                }
+                
+                if(!isDelete){
+                    if($scope.listview.selected){
+                        var selectedListView = $scope.getSelectedListview(); 
+                        $scope.fetchTasks(selectedListView);
+
+                    }else{
+                        $scope.fetchTasks($scope.listview);
+                    }
+                }
+
+            });
+        };
+
+        //AP-257
+        $scope.saveListview = function()
+        {
+            var selectedListView = $scope.getSelectedListview();
+            var listViewId = $scope.isNewListView ? null : $scope.listview.confId;
+
+            RemoteActionService.callRemoteAction("saveListView", [ $scope.listview.status, $scope.modal.products, $scope.users, $scope.tradingPartners, $scope.modal.forms, $scope.modal.upRelationshipAttributes, $scope.modal.upRelationshipTags, $scope.modal.listViewName, listViewId, $scope.listview.default ], function(result) {
+                    selectedListView = result;
+                    $scope.listview.selected = result.confId;
+                    $scope.selListView = result.confId;
+                    $scope.getListViews(true);
+            });
+        };
+
+        //AP-257
+        $scope.getSelectedListview = function()
+        {
+            for(var i = 0; i &lt; $scope.listViews.length; i++){
+               if($scope.listViews[i].confId != undefined &amp;&amp; ($scope.listViews[i].confId == $scope.listview.selected || $scope.listViews[i].confId == $scope.listview.confId)){
+                    if($scope.listViews[i].formWrapperList){
+                        if($scope.listViews[i].formWrapperList){
+                            $scope.selectedModel.forms = $scope.listViews[i].formWrapperList;
+                        }else{
+                            $scope.selectedModel.forms = $scope.listViews[i].containerTemplateWrapperList;
+                        }
+                    }
+                    return $scope.listViews[i];
+               }
+            }
+        };
+
+        $scope.initModalData = function(){
+            RemoteActionService.callRemoteAction("getModalFilterData", null, function(result){
+                //$scope.selectedModel.forms = result.containerTemplateWrapperList;
+            });
+        };
+
+        $scope.save = function(){
+            $scope.isSave = true;
+            $scope.saveListview();
+            //$scope.fetchTasks($scope.taskSelected);
+            //$scope.getFilterNumber();
+        }
+        $scope.selectProduct = function(param){
+            product.searchTerm = '';
+            $scope.modal.products = param;
+        };
+
+        $scope.selectForm = function(param){
+            form.searchTerm = '';
+            $scope.modal.forms = param;
+        };
+
+        $scope.selectUPRelationshipAttribute = function(param){
+            upRelationshipAttribute.searchTerm = '';
+            $scope.modal.upRelationshipAttributes = param;
+            $scope.modal.attribute = '';
+        };
+
+        $scope.selectUPRelationshipTag = function(param){
+            upRelationshipTag.searchTerm = '';
+            $scope.modal.upRelationshipTags = param;
+        };
+
+        $scope.selectAttribute = function(){
+            attribute = '';
+            $scope.attributes = '';
+        };
+
+        $scope.clearModal = function(){
+            product.clearSelection();
+            user.clearSelection();
+            tradingPartner.clearSelection();
+            form.clearSelection();
+            upRelationshipAttribute.clearSelection();
+            upRelationshipTag.clearSelection();
+            $scope.modal.products = [];
+            $scope.modal.forms = [];
+            $scope.modal.upRelationshipAttributes = [];
+            $scope.modal.attribute = '';
+            $scope.modal.upRelationshipTags = [];
+            $scope.users = [];
+            $scope.tradingPartners = [];
+            $scope.listview.status ='All';
+        };
+
+        $scope.selectTradingPartner = function(param){
+            tradingPartner.searchTerm = '';
+            $scope.tradingPartners = param;
+        };
+
+        $scope.selectUser = function(param){
+            user.searchTerm = '';
+            $scope.users = param;
+        };
+
+        $scope.getIcon = function(item){
+            if(item.entityType == 'User'){
+                return { icon: "add_contact", iconFile: "action", classes: "slds-icon-text-default background-user-icon" };
+            }
+            if(item.entityType == 'TradingPartner'){
+                return { icon: "account", iconFile: "standard", classes: "slds-icon-text-default background-tp-icon" };
+            }
+            if(item.entityType == 'Product'){
+                return { icon: "product", iconFile: "standard", classes: "slds-icon-text-default background-product-icon" };
+            }
+            if(item.entityType == 'Form'){
+                return { icon: "report", iconFile: "standard", classes: "slds-icon-text-default background-form-icon" };
+            }
+            if(item.entityType == 'ProductRelationshipAttribute'){
+                return { icon: "record", iconFile: "standard", classes: "slds-icon-text-default background-form-icon" };
+            }
+            if(item.entityType == 'ProductRelationshipTag'){
+                return { icon: "record", iconFile: "standard", classes: "slds-icon-text-default background-form-icon" };
+            }
+        };
+
+        $scope.openModal = function(param)
+        {
+            $scope.clearModal();
+            $scope.modal.openFormModal = true;
+            $scope.listview.default = false;
+            $scope.isNewListView = param;
+
+            if(param){
+                $scope.modal.listViewName = '';
+                $scope.listview.title = 'New List View';
+                $scope.listview.default = false;
+            }else{
+                $scope.modal.listViewName = $scope.listview.filterName;
+                var selectedListView = $scope.getSelectedListview(); 
+                $scope.listview.default =  selectedListView.defaultListView;
+                $scope.listview.title = 'Edit List View';
+                for(var i = 0; i &lt; selectedListView.productWrapperList.length; i++){
+                   product.selectItem(selectedListView.productWrapperList[i]);
+                }
+
+                if(selectedListView.userWrapperList){
+                    for(var i = 0; i &lt; selectedListView.userWrapperList.length; i++){
+                       user.selectItem(selectedListView.userWrapperList[i]);
+                    }
+                }
+
+                if(selectedListView.tradingPartnerWrapperList){
+                    for(var i = 0; i &lt; selectedListView.tradingPartnerWrapperList.length; i++){
+                       tradingPartner.selectItem(selectedListView.tradingPartnerWrapperList[i]);
+                    }
+                }
+
+                if(selectedListView.formWrapperList){
+                    for(var i = 0; i &lt; selectedListView.formWrapperList.length; i++){
+                       form.selectItem(selectedListView.formWrapperList[i]);
+                    }
+                }
+
+                if(selectedListView.upRelationshipAttributeWrapperList){
+                    for(var i = 0; i &lt; selectedListView.upRelationshipAttributeWrapperList.length; i++){
+                        upRelationshipAttribute.selectItem(selectedListView.upRelationshipAttributeWrapperList[i]);
+                    }
+                }
+
+                if(selectedListView.upRelationshipTagWrapperList){
+                    for(var i = 0; i &lt; selectedListView.upRelationshipTagWrapperList.length; i++){
+                        upRelationshipTag.selectItem(selectedListView.upRelationshipTagWrapperList[i]);
+                    }
+                }
+
+                $scope.listview.status = selectedListView.taskStatus;
+                $scope.selectedModel.selectedForm.id = selectedListView.formId;
+            }
+            $scope.usersWrapper = $scope.users;
+            $scope.tradingPartnersWrapper = $scope.tradingPartners;
+        };
+
+        $scope.deleteListView = function(param){
+            RemoteActionService.callRemoteAction("deleteListView", [$scope.listview.confId],function(result) {
+                    $scope.getListViews(true, true);
+                    $scope.fetchTasks('Open');
+                    $scope.clearModal();
+            });
+        };
+
+        $scope.closeModal = function(){
+            $scope.modal.openFormModal = false;
+        };
+
+        $scope.openRequestModal = function(){
+            $scope.modal.relatedRequestModal = true;
+            $scope.filterText.name = "";
+            $scope.filterChildRequest()
+        };
+
+        $scope.closeRequestModal = function(param){
+            $scope.modal.relatedRequestModal = false;
+        };
+
+        $scope.cancel = function()
+        {
+            product.clearSelection();
+            user.clearSelection();
+            tradingPartner.clearSelection();
+            form.clearSelection();
+            upRelationshipAttribute.clearSelection();
+            upRelationshipTag.clearSelection();
+            $scope.modal.products = [];
+            $scope.users = [];
+            $scope.tradingPartners = [];
+            $scope.modal.forms = [];
+            $scope.modal.upRelationshipAttributes = [];
+            $scope.modal.attribute = '';
+            $scope.modal.upRelationshipTags = [];
+            $scope.modal.openFormModal = false;
+        };
+
+        $scope.getFilterNumber = function()
+        {
+            $scope.countOfFilters = Array.getLength($scope.products) + Array.getLength($scope.users) + Array.getLength($scope.tradingPartners) + Array.getLength($scope.forms);
+
+            if(String.isNotEmpty($scope.selectedModel.selectedForm.id))
+               $scope.countOfFilters++;
+
+            return $scope.countOfFilters;  
+        };
+
+        $scope.resetFilters = function()
+        {
+            $scope.isReset = true;
+            product.clearSelection();
+            user.clearSelection();
+            tradingPartner.clearSelection();
+            form.clearSelection();
+            upRelationshipAttribute.clearSelection();
+            upReleationshipTag.clearSelection();
+            $scope.products = [];
+            $scope.users = [];
+            $scope.tradingPartners = [];
+            $scope.forms = [];
+            $scope.upRelationshipAttributes = [];
+            $scope.upRelationshipTags = [];
+            $scope.countOfFilters.length = 0;
+        };
+        
+        /* End Filters Actions */
+
+        $scope.backToTask = function()
+        {
+            $scope.iFrameWidth = window.innerWidth;
+            if($scope.iFrameWidth &lt; 1024)
+                $scope.slideTrue = false;
+        };
+
+        $scope.doComplete = function(param, index, $event)
+        { 
+            $event.stopImmediatePropagation();
+            RemoteActionService.callRemoteAction("closeSelectedTasks", [param.taskId], function(result) 
+            {
+                if(param.requestType == 'Document'){
+                    if(param.isTaskSeen)
+                    {
+                        param.isTaskSeen = false;
+                        param.isCompleted = false;
+                        param.isNew = true;
+                        $scope.fetchTaskDetail(index);
+                    }
+                    else{               
+                        param.isTaskSeen = true;
+                        param.isCompleted = true;
+                        param.isNew = false;                    
+                        $scope.fetchTaskDetail(index);
+                    }
+                }
+                else
+                {
+                    //AP-267
+                    if(param.taskWfStatus == 'Kid Fail (Adult Pass)'){
+                        param.isCompleted = true;
+                        param.isNew = false;
+                        param.isTaskSeen=true;
+                    }else{
+                        param.isTaskSeen = !param.isTaskSeen;
+                        $scope.fetchTaskDetail(index);
+                    }
+                }  
+            });
+            $scope.fetchTasks($scope.listview);
+        };
+
+        $scope.openFormView = function(row){
+            NavigationService.goToPage("FormView", { id: row.containerInstanceId, vid: $scope.selListView }, "FormView");
+        };
+
+        $scope.reject = function(row) {
+            NavigationService.goToPage("RequestReject", { id: row.whatId, vid: $scope.selListView });
+        };
+        
+        $scope.reSubmit = function(row) {
+            NavigationService.goToPage("RequestReject", { id: row.whatId, vid: $scope.selListView, resubmit: true}); 
+        };
+
+        $scope.returnToVerifier = function(row) {
+            NavigationService.goToPage("RequestReject", { id: row.whatId, vid: $scope.selListView }); 
+        };
+
+        $scope.approve = function(row) {
+            NavigationService.goToPage("RequestApprove", { id: row.whatId }); 
+        };
+
+        $scope.approveAndRetest = function(row) {
+            NavigationService.goToPage("RequestApproveAndRetest", { id: row.whatId, vid: $scope.selListView }); 
+        }; 
+
+        $scope.markAsComplete = function(row)
+        {
+            RemoteActionService.callRemoteAction("closeSelectedTasks", [row.taskId], function(result) 
+            {
+                if(row.requestType == 'Document'){
+                    if(row.isTaskSeen)
+                    {
+                        row.isTaskSeen = false;
+                        row.isCompleted = false;
+                        row.isNew = true;
+                        $scope.fetchTaskDetail($scope.taskDetailIndex);
+                    }
+                    else{
+                        row.isTaskSeen = true;
+                        row.isCompleted = true;
+                        row.isNew = false;
+                        $scope.fetchTaskDetail($scope.taskDetailIndex);
+                    }
+                }
+                //AP-267
+                else if(row.taskWfStatus == 'Kid Fail (Adult Pass)'){
+                    row.isCompleted = true;
+                    row.isNew = false;
+                    row.isTaskSeen=true;
+                }
+                else{
+                    row.isTaskSeen = !row.isTaskSeen;
+                    $scope.fetchTaskDetail($scope.taskDetailIndex);
+                }
+            });
+            $scope.fetchTasks($scope.listview);
+        };
+
+        $scope.cancelRequest = function(taskId){
+            RemoteActionService.callRemoteAction("cancelRequestByTaskId", [taskId], function(result) 
+            {
+                $scope.fetchTasks($scope.listview);
+            });
+        };
+
+        $scope.cancelRequestFromModal = function(task){
+            var a = $scope.cancelRequest(task.taskId);
+            $scope.modal.relatedRequestModal = false;
+        };
+
+        //show reject button.
+        $scope.showProductRejectButton = function(task)
+        {
+            //Div Condition 409 and 436
+            return (task.taskWfStatus ==='Fail' || Array.in(task.taskStatus, ['Open', 'Reopen']))
+                &amp;&amp; task.isCurrentOrgInAwaitingSubmitStatus 
+                &amp;&amp; !Array.in(task.taskWfStatus, ['Submitted by Verifier', 'Submitted by Responder', 'Fail', 'Pass']) 
+                &amp;&amp; !Array.in(task.taskRequestStatus, ['Rejected by Verifier', 'Rejected by Responder', 'Open - KID FAIL (ADULT PASS)']);
+        };
+
+        //Show Open Form button
+        $scope.showProductOpenFormButton = function(task)
+        {
+            console.log("Open Form",task.taskStatus, task.formResult, task.taskWfStatus);
+            return (task.taskWfStatus === 'Fail' || Array.in(task.taskStatus, ['Open', 'Reopen']))
+            &amp;&amp; (   !Array.in(task.formResult, ['Pass', 'Fail']) 
+                || task.taskWfStatus != 'Pass' &amp;&amp; task.isRequestor 
+                || task.taskWfStatus != 'Pass' &amp;&amp; task.isCurrentOrgInAwaitingSubmitStatus &amp;&amp; !Array.in(task.taskRequestStatus, ['Rejected by Verifier', 'Submitted by Verifier', 'Closed - FAILED'])
+                || task.formResult == 'Pass'   &amp;&amp; !task.isRequestor &amp;&amp; !task.isCurrentOrgInAwaitingSubmitStatus &amp;&amp; task.taskWfStatus == 'Submitted by Verifier'   );
+        };
+
+        //Show ReSubmit button
+        $scope.showReSubmitButton = function(task)
+        {
+            return (task.taskWfStatus === 'Fail' || Array.in(task.taskStatus, ['Open', 'Reopen']) )
+                &amp;&amp; task.isCurrentOrgInAwaitingSubmitStatus 
+                &amp;&amp; Array.in(task.taskRequestStatus, ['Rejected by Responder', 'Rejected by Verifier']);
+        };
+
+        //Show Return to Verifier or Approve buttons
+        $scope.showReturnToVerifierOrApprove = function(task)
+        {
+            //TODO: if this only works when taskWfStatus == 'Submitted by Verifier', taskWfStatus cannot be 'Fail' at the same time.
+            //task.taskWfStatus === 'Fail' can be removed from the condition
+            return (task.taskWfStatus === 'Fail' || Array.in(task.taskStatus, ['Open', 'Reopen']) )
+                &amp;&amp; task.isCurrentOrgInAwaitingSubmitStatus 
+                &amp;&amp; task.taskWfStatus == 'Submitted by Verifier';
+        };
+
+        $scope.showMarkAsComplete = function (task)
+        {
+            return !$scope.buttons &amp;&amp; !task.isCompleted || !task.isTaskSeen &amp;&amp; !(task.taskStatus === 'Open' &amp;&amp; task.requestType === 'Product Test')
+                || Array.in(task.taskWfStatus, ['Fail', 'Kid Fail (Adult Pass)'])
+                || task.maxRejectionsReached &amp;&amp; !task.isTaskSeen 
+                || task.taskWfStatus.includes('Rejected') &amp;&amp; !task.isRequestor &amp;&amp; !task.isCurrentOrgInAwaitingSubmitStatus
+                || !task.isRequestor &amp;&amp; task.taskWfStatus === 'Submitted by Verifier' &amp;&amp; task.formResult === 'Fail';
+        };
+
+        $scope.showCancelButton = task =&gt; task.showCancelButton;
+
+        $scope.getProductStatusClassStrike = task =&gt; task &amp;&amp; task.isCompleted &amp;&amp; task.isTaskSeen ? "strike" : "";
+
+        $scope.filterChildRequest = function ()
+        {
+            $scope.filterText.filteredList = [];
+            if($scope.taskDetail &amp;&amp; Array.isNotEmpty($scope.taskDetail.childTasks))
+                $scope.filterText.filteredList = $scope.taskDetail.childTasks.filter(ct =&gt; String.includes(ct.productName, $scope.filterText.name));
+
+            angular.forEach($scope.taskDetail.childTasks, $scope.reOpenButtonVisibility);
+        };
+
+        $scope.init();
+
+    }]);
+</script>
+<script>if (this.SfdcApp &amp;&amp; this.SfdcApp.projectOneNavigator) { SfdcApp.projectOneNavigator.sendTitleToParent('ICIX_V1__TaskListPage'); } </script></body></html>
